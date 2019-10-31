@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "LinkedList.h"
+#include "Controller.h"
+#include "Employee.h"
+#include "utn.h"
+
+Employee* employee_new()
+{
+	Employee* emp =(Employee*)malloc(sizeof(Employee));
+
+	if(emp != NULL)
+	{
+		emp->id = 0;
+		strcpy(emp->nombre,"");
+		emp->horasTrabajadas = 0;
+		emp->sueldo = 0;
+	}
+	return emp;
+}
+
+
+
+

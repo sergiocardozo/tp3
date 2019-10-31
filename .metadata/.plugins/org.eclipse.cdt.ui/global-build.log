@@ -1,0 +1,1186 @@
+18:56:07 **** Clean-only build of configuration Debug for project tp3_linux ****
+make clean 
+rm -rf  ./Controller.o ./Employee.o ./main.o ./parser.o  ./Controller.d ./Employee.d ./main.d ./parser.d  TP3
+ 
+18:56:07 **** Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+Finished building: ../Controller.c
+ 
+Building file: ../Employee.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Employee.d" -MT"Employee.o" -o "Employee.o" "../Employee.c"
+Finished building: ../Employee.c
+ 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+Finished building: ../parser.c
+ 
+Building target: tp3_linux
+Invoking: GCC C Linker
+gcc  -o "tp3_linux"  ./Controller.o ./Employee.o ./main.o ./parser.o    /home/alumno/Imágenes/eclipse_tp3/tp3_linux/LinkedList.a
+Finished building target: tp3_linux
+ 
+18:56:30 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c:44:5: error: redefinition of ‘main’
+ int main()
+     ^~~~
+../main.c:36:5: note: previous definition of ‘main’ was here
+ int main()
+     ^~~~
+subdir.mk:27: fallo en las instrucciones para el objetivo 'main.o'
+make: *** [main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:58:13 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: tp3_linux
+Invoking: GCC C Linker
+gcc  -o "tp3_linux"  ./Controller.o ./Employee.o ./main.o ./parser.o    /home/alumno/Imágenes/eclipse_tp3/tp3_linux/LinkedList.a
+Finished building target: tp3_linux
+ 
+18:58:15 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+make: No se hace nada para 'all'.
+20:43:45 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+Finished building: ../Controller.c
+ 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c: In function ‘main’:
+../main.c:27:6: warning: implicit declaration of function ‘utn_getUnsignedInt’ [-Wimplicit-function-declaration]
+      utn_getUnsignedInt("\n1. Cargar los datos de los empleados desde el archivo data.csv (modo texto).\
+      ^~~~~~~~~~~~~~~~~~
+Finished building: ../main.c
+ 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+../parser.c: In function ‘parser_EmployeeFromText’:
+../parser.c:27:21: warning: format ‘%[^,’ expects argument of type ‘char *’, but argument 3 has type ‘char (*)[50]’ [-Wformat=]
+    fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],[^\n]\n",
+                     ^
+../parser.c:27:27: warning: format ‘%[^,’ expects argument of type ‘char *’, but argument 4 has type ‘char (*)[50]’ [-Wformat=]
+    fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],[^\n]\n",
+                           ^
+../parser.c:27:33: warning: format ‘%[^,’ expects argument of type ‘char *’, but argument 5 has type ‘char (*)[50]’ [-Wformat=]
+    fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],[^\n]\n",
+                                 ^
+../parser.c:27:39: warning: format ‘%[^,’ expects argument of type ‘char *’, but argument 6 has type ‘char (*)[50]’ [-Wformat=]
+    fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],[^\n]\n",
+                                       ^
+subdir.mk:30: fallo en las instrucciones para el objetivo 'parser.o'
+../parser.c: In function ‘parser_EmployeeFromBinary’:
+../parser.c:61:45: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+    if(!employee_setId(pEmployee, auxEmployee.id) &&
+                                             ^
+                                             ->
+../parser.c:62:48: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setNombre(pEmployee, auxEmployee.nombre) &&
+                                                ^
+                                                ->
+../parser.c:63:57: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setHorasTrabajadas(pEmployee, auxEmployee.horasTrabajadas) &&
+                                                         ^
+                                                         ->
+../parser.c:64:48: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setSueldo(pEmployee, auxEmployee.sueldo))
+                                                ^
+                                                ->
+../parser.c:66:12: error: ‘pA’ undeclared (first use in this function)
+     ll_add(pA)
+            ^~
+../parser.c:66:12: note: each undeclared identifier is reported only once for each function it appears in
+../parser.c:66:5: error: too few arguments to function ‘ll_add’
+     ll_add(pA)
+     ^~~~~~
+In file included from ../parser.c:3:0:
+../LinkedList.h:41:5: note: declared here
+ int ll_add(LinkedList* this, void* pElement);
+     ^~~~~~
+../parser.c:67:4: error: expected ‘;’ before ‘}’ token
+    }
+    ^
+../parser.c:51:6: warning: unused variable ‘retorno’ [-Wunused-variable]
+  int retorno = -1;
+      ^~~~~~~
+make: *** [parser.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:44:31 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+../parser.c: In function ‘parser_EmployeeFromText’:
+../parser.c:27:21: warning: format ‘%[^,’ expects argument of type ‘char *’, but argument 3 has type ‘char (*)[50]’ [-Wformat=]
+subdir.mk:30: fallo en las instrucciones para el objetivo 'parser.o'
+    fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],[^\n]\n",
+                     ^
+../parser.c:27:27: warning: format ‘%[^,’ expects argument of type ‘char *’, but argument 4 has type ‘char (*)[50]’ [-Wformat=]
+    fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],[^\n]\n",
+                           ^
+../parser.c:27:33: warning: format ‘%[^,’ expects argument of type ‘char *’, but argument 5 has type ‘char (*)[50]’ [-Wformat=]
+    fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],[^\n]\n",
+                                 ^
+../parser.c:27:39: warning: format ‘%[^,’ expects argument of type ‘char *’, but argument 6 has type ‘char (*)[50]’ [-Wformat=]
+    fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],[^\n]\n",
+                                       ^
+../parser.c:30:23: warning: implicit declaration of function ‘employee_newParametro’ [-Wimplicit-function-declaration]
+    pAuxListEmployee = employee_newParametro(bufferId,
+                       ^~~~~~~~~~~~~~~~~~~~~
+../parser.c:30:21: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+    pAuxListEmployee = employee_newParametro(bufferId,
+                     ^
+../parser.c: In function ‘parser_EmployeeFromBinary’:
+../parser.c:62:45: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+    if(!employee_setId(pEmployee, auxEmployee.id) &&
+                                             ^
+                                             ->
+../parser.c:63:48: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setNombre(pEmployee, auxEmployee.nombre) &&
+                                                ^
+                                                ->
+../parser.c:64:57: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setHorasTrabajadas(pEmployee, auxEmployee.horasTrabajadas) &&
+                                                         ^
+                                                         ->
+../parser.c:65:48: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setSueldo(pEmployee, auxEmployee.sueldo))
+                                                ^
+                                                ->
+../parser.c:67:12: error: ‘pA’ undeclared (first use in this function)
+     ll_add(pA)
+            ^~
+../parser.c:67:12: note: each undeclared identifier is reported only once for each function it appears in
+../parser.c:67:5: error: too few arguments to function ‘ll_add’
+     ll_add(pA)
+     ^~~~~~
+In file included from ../parser.c:3:0:
+../LinkedList.h:41:5: note: declared here
+ int ll_add(LinkedList* this, void* pElement);
+     ^~~~~~
+../parser.c:68:4: error: expected ‘;’ before ‘}’ token
+    }
+    ^
+../parser.c:52:6: warning: unused variable ‘retorno’ [-Wunused-variable]
+  int retorno = -1;
+      ^~~~~~~
+make: *** [parser.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:44:55 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+../parser.c: In function ‘parser_EmployeeFromText’:
+../parser.c:27:21: warning: format ‘%[^,’ expects argument of type ‘char *’, but argument 3 has type ‘char (*)[50]’ [-Wformat=]
+    fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],[^\n]\n",
+                     ^
+../parser.c:27:27: warning: format ‘%[^,’ expects argument of type ‘char *’, but argument 4 has type ‘char (*)[50]’ [-Wformat=]
+    fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],[^\n]\n",
+                           ^
+../parser.c:27:33: warning: format ‘%[^,’ expects argument of type ‘char *’, but argument 5 has type ‘char (*)[50]’ [-Wformat=]
+    fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],[^\n]\n",
+                                 ^
+subdir.mk:30: fallo en las instrucciones para el objetivo 'parser.o'
+../parser.c:27:39: warning: format ‘%[^,’ expects argument of type ‘char *’, but argument 6 has type ‘char (*)[50]’ [-Wformat=]
+    fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],[^\n]\n",
+                                       ^
+../parser.c:30:23: warning: implicit declaration of function ‘employee_newParametro’ [-Wimplicit-function-declaration]
+    pAuxListEmployee = employee_newParametro(bufferId,
+                       ^~~~~~~~~~~~~~~~~~~~~
+../parser.c:30:21: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+    pAuxListEmployee = employee_newParametro(bufferId,
+                     ^
+../parser.c: In function ‘parser_EmployeeFromBinary’:
+../parser.c:62:45: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+    if(!employee_setId(pEmployee, auxEmployee.id) &&
+                                             ^
+                                             ->
+../parser.c:63:48: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setNombre(pEmployee, auxEmployee.nombre) &&
+                                                ^
+                                                ->
+../parser.c:64:57: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setHorasTrabajadas(pEmployee, auxEmployee.horasTrabajadas) &&
+                                                         ^
+                                                         ->
+../parser.c:65:48: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setSueldo(pEmployee, auxEmployee.sueldo))
+                                                ^
+                                                ->
+../parser.c:67:12: error: ‘pA’ undeclared (first use in this function)
+     ll_add(pA)
+            ^~
+../parser.c:67:12: note: each undeclared identifier is reported only once for each function it appears in
+../parser.c:67:5: error: too few arguments to function ‘ll_add’
+     ll_add(pA)
+     ^~~~~~
+In file included from ../parser.c:3:0:
+../LinkedList.h:41:5: note: declared here
+ int ll_add(LinkedList* this, void* pElement);
+     ^~~~~~
+../parser.c:68:4: error: expected ‘;’ before ‘}’ token
+    }
+    ^
+../parser.c:52:6: warning: unused variable ‘retorno’ [-Wunused-variable]
+  int retorno = -1;
+      ^~~~~~~
+make: *** [parser.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:45:42 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+../parser.c: In function ‘parser_EmployeeFromText’:
+../parser.c:27:21: warning: format ‘%[^,’ expects argument of type ‘char *’, but argument 3 has type ‘char (*)[50]’ [-Wformat=]
+    fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],[^\n]\n",
+                     ^
+../parser.c:27:27: warning: format ‘%[^,’ expects argument of type ‘char *’, but argument 4 has type ‘char (*)[50]’ [-Wformat=]
+    fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],[^\n]\n",
+                           ^
+../parser.c:27:33: warning: format ‘%[^,’ expects argument of type ‘char *’, but argument 5 has type ‘char (*)[50]’ [-Wformat=]
+    fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],[^\n]\n",
+                                 ^
+../parser.c:27:39: warning: format ‘%[^,’ expects argument of type ‘char *’, but argument 6 has type ‘char (*)[50]’ [-Wformat=]
+    fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],[^\n]\n",
+                                       ^
+subdir.mk:30: fallo en las instrucciones para el objetivo 'parser.o'
+../parser.c:30:23: warning: implicit declaration of function ‘employee_newParametro’ [-Wimplicit-function-declaration]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+                       ^~~~~~~~~~~~~~~~~~~~~
+../parser.c:30:21: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+                     ^
+../parser.c: In function ‘parser_EmployeeFromBinary’:
+../parser.c:61:45: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+    if(!employee_setId(pEmployee, auxEmployee.id) &&
+                                             ^
+                                             ->
+../parser.c:62:48: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setNombre(pEmployee, auxEmployee.nombre) &&
+                                                ^
+                                                ->
+../parser.c:63:57: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setHorasTrabajadas(pEmployee, auxEmployee.horasTrabajadas) &&
+                                                         ^
+                                                         ->
+../parser.c:64:48: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setSueldo(pEmployee, auxEmployee.sueldo))
+                                                ^
+                                                ->
+../parser.c:66:12: error: ‘pA’ undeclared (first use in this function)
+     ll_add(pA)
+            ^~
+../parser.c:66:12: note: each undeclared identifier is reported only once for each function it appears in
+../parser.c:66:5: error: too few arguments to function ‘ll_add’
+     ll_add(pA)
+     ^~~~~~
+In file included from ../parser.c:3:0:
+../LinkedList.h:41:5: note: declared here
+ int ll_add(LinkedList* this, void* pElement);
+     ^~~~~~
+../parser.c:67:4: error: expected ‘;’ before ‘}’ token
+    }
+    ^
+../parser.c:51:6: warning: unused variable ‘retorno’ [-Wunused-variable]
+  int retorno = -1;
+      ^~~~~~~
+make: *** [parser.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:45:47 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+../parser.c: In function ‘parser_EmployeeFromText’:
+../parser.c:27:21: warning: format ‘%[^,’ expects argument of type ‘char *’, but argument 3 has type ‘char (*)[50]’ [-Wformat=]
+    fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],[^\n]\n",
+                     ^
+../parser.c:27:27: warning: format ‘%[^,’ expects argument of type ‘char *’, but argument 4 has type ‘char (*)[50]’ [-Wformat=]
+    fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],[^\n]\n",
+                           ^
+../parser.c:27:33: warning: format ‘%[^,’ expects argument of type ‘char *’, but argument 5 has type ‘char (*)[50]’ [-Wformat=]
+    fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],[^\n]\n",
+subdir.mk:30: fallo en las instrucciones para el objetivo 'parser.o'
+                                 ^
+../parser.c:27:39: warning: format ‘%[^,’ expects argument of type ‘char *’, but argument 6 has type ‘char (*)[50]’ [-Wformat=]
+    fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],[^\n]\n",
+                                       ^
+../parser.c:30:23: warning: implicit declaration of function ‘employee_newParametro’ [-Wimplicit-function-declaration]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+                       ^~~~~~~~~~~~~~~~~~~~~
+../parser.c:30:21: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+                     ^
+../parser.c: In function ‘parser_EmployeeFromBinary’:
+../parser.c:61:45: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+    if(!employee_setId(pEmployee, auxEmployee.id) &&
+                                             ^
+                                             ->
+../parser.c:62:48: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setNombre(pEmployee, auxEmployee.nombre) &&
+                                                ^
+                                                ->
+../parser.c:63:57: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setHorasTrabajadas(pEmployee, auxEmployee.horasTrabajadas) &&
+                                                         ^
+                                                         ->
+../parser.c:64:48: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setSueldo(pEmployee, auxEmployee.sueldo))
+                                                ^
+                                                ->
+../parser.c:66:12: error: ‘pA’ undeclared (first use in this function)
+     ll_add(pA)
+            ^~
+../parser.c:66:12: note: each undeclared identifier is reported only once for each function it appears in
+../parser.c:66:5: error: too few arguments to function ‘ll_add’
+     ll_add(pA)
+     ^~~~~~
+In file included from ../parser.c:3:0:
+../LinkedList.h:41:5: note: declared here
+ int ll_add(LinkedList* this, void* pElement);
+     ^~~~~~
+../parser.c:67:4: error: expected ‘;’ before ‘}’ token
+    }
+    ^
+../parser.c:51:6: warning: unused variable ‘retorno’ [-Wunused-variable]
+  int retorno = -1;
+      ^~~~~~~
+make: *** [parser.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:47:02 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+../parser.c: In function ‘parser_EmployeeFromText’:
+../parser.c:27:21: warning: format ‘%[^,’ expects argument of type ‘char *’, but argument 3 has type ‘char (*)[50]’ [-Wformat=]
+    fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],[^\n]\n",
+                     ^
+../parser.c:27:27: warning: format ‘%[^,’ expects argument of type ‘char *’, but argument 4 has type ‘char (*)[50]’ [-Wformat=]
+    fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],[^\n]\n",
+                           ^
+../parser.c:27:33: warning: format ‘%[^,’ expects argument of type ‘char *’, but argument 5 has type ‘char (*)[50]’ [-Wformat=]
+    fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],[^\n]\n",
+subdir.mk:30: fallo en las instrucciones para el objetivo 'parser.o'
+                                 ^
+../parser.c:27:39: warning: format ‘%[^,’ expects argument of type ‘char *’, but argument 6 has type ‘char (*)[50]’ [-Wformat=]
+    fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],[^\n]\n",
+                                       ^
+../parser.c:30:23: warning: implicit declaration of function ‘employee_newParametro’ [-Wimplicit-function-declaration]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+                       ^~~~~~~~~~~~~~~~~~~~~
+../parser.c:30:21: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+                     ^
+../parser.c: In function ‘parser_EmployeeFromBinary’:
+../parser.c:61:45: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+    if(!employee_setId(pEmployee, auxEmployee.id) &&
+                                             ^
+                                             ->
+../parser.c:62:48: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setNombre(pEmployee, auxEmployee.nombre) &&
+                                                ^
+                                                ->
+../parser.c:63:57: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setHorasTrabajadas(pEmployee, auxEmployee.horasTrabajadas) &&
+                                                         ^
+                                                         ->
+../parser.c:64:48: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setSueldo(pEmployee, auxEmployee.sueldo))
+                                                ^
+                                                ->
+../parser.c:51:6: warning: unused variable ‘retorno’ [-Wunused-variable]
+  int retorno = -1;
+      ^~~~~~~
+make: *** [parser.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:47:15 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+../parser.c: In function ‘parser_EmployeeFromText’:
+../parser.c:27:21: warning: format ‘%[^,’ expects argument of type ‘char *’, but argument 3 has type ‘char (*)[50]’ [-Wformat=]
+    fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],[^\n]\n",
+                     ^
+../parser.c:27:27: warning: format ‘%[^,’ expects argument of type ‘char *’, but argument 4 has type ‘char (*)[50]’ [-Wformat=]
+    fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],[^\n]\n",
+                           ^
+../parser.c:27:33: warning: format ‘%[^,’ expects argument of type ‘char *’, but argument 5 has type ‘char (*)[50]’ [-Wformat=]
+subdir.mk:30: fallo en las instrucciones para el objetivo 'parser.o'
+    fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],[^\n]\n",
+                                 ^
+../parser.c:27:39: warning: format ‘%[^,’ expects argument of type ‘char *’, but argument 6 has type ‘char (*)[50]’ [-Wformat=]
+    fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],[^\n]\n",
+                                       ^
+../parser.c:30:23: warning: implicit declaration of function ‘employee_newParametro’ [-Wimplicit-function-declaration]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+                       ^~~~~~~~~~~~~~~~~~~~~
+../parser.c:30:21: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+                     ^
+../parser.c: In function ‘parser_EmployeeFromBinary’:
+../parser.c:61:45: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+    if(!employee_setId(pEmployee, auxEmployee.id) &&
+                                             ^
+                                             ->
+../parser.c:62:48: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setNombre(pEmployee, auxEmployee.nombre) &&
+                                                ^
+                                                ->
+../parser.c:63:57: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setHorasTrabajadas(pEmployee, auxEmployee.horasTrabajadas) &&
+                                                         ^
+                                                         ->
+../parser.c:64:48: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setSueldo(pEmployee, auxEmployee.sueldo))
+                                                ^
+                                                ->
+make: *** [parser.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:47:58 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+../parser.c: In function ‘parser_EmployeeFromText’:
+../parser.c:30:23: warning: implicit declaration of function ‘employee_newParametro’ [-Wimplicit-function-declaration]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+                       ^~~~~~~~~~~~~~~~~~~~~
+../parser.c:30:21: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+                     ^
+../parser.c: In function ‘parser_EmployeeFromBinary’:
+subdir.mk:30: fallo en las instrucciones para el objetivo 'parser.o'
+../parser.c:61:45: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+    if(!employee_setId(pEmployee, auxEmployee.id) &&
+                                             ^
+                                             ->
+../parser.c:62:48: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setNombre(pEmployee, auxEmployee.nombre) &&
+                                                ^
+                                                ->
+../parser.c:63:57: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setHorasTrabajadas(pEmployee, auxEmployee.horasTrabajadas) &&
+                                                         ^
+                                                         ->
+../parser.c:64:48: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setSueldo(pEmployee, auxEmployee.sueldo))
+                                                ^
+                                                ->
+make: *** [parser.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+20:48:13 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+../parser.c: In function ‘parser_EmployeeFromText’:
+../parser.c:30:23: warning: implicit declaration of function ‘employee_newParametro’ [-Wimplicit-function-declaration]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+                       ^~~~~~~~~~~~~~~~~~~~~
+../parser.c:30:21: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+                     ^
+../parser.c: In function ‘parser_EmployeeFromBinary’:
+../parser.c:61:45: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+    if(!employee_setId(pEmployee, auxEmployee.id) &&
+                                             ^
+                                             ->
+../parser.c:62:48: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setNombre(pEmployee, auxEmployee.nombre) &&
+                                                ^
+                                                ->
+../parser.c:63:57: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setHorasTrabajadas(pEmployee, auxEmployee.horasTrabajadas) &&
+                                                         ^
+                                                         ->
+../parser.c:64:48: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setSueldo(pEmployee, auxEmployee.sueldo))
+subdir.mk:30: fallo en las instrucciones para el objetivo 'parser.o'
+                                                ^
+                                                ->
+make: *** [parser.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+21:09:22 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../Employee.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Employee.d" -MT"Employee.o" -o "Employee.o" "../Employee.c"
+../Employee.c: In function ‘employee_new’:
+../Employee.c:15:3: warning: implicit declaration of function ‘strcpy’ [-Wimplicit-function-declaration]
+   strcpy(emp->nombre,"");
+   ^~~~~~
+../Employee.c:15:3: warning: incompatible implicit declaration of built-in function ‘strcpy’
+../Employee.c:15:3: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
+../Employee.c: In function ‘employee_newParametros’:
+../Employee.c:28:3: warning: incompatible implicit declaration of built-in function ‘strcpy’
+   strcpy(emp->id,idStr);
+   ^~~~~~
+../Employee.c:28:3: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
+../Employee.c:28:10: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(emp->id,idStr);
+          ^~~
+../Employee.c:28:10: note: expected ‘char *’ but argument is of type ‘int’
+../Employee.c:30:10: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(emp->horasTrabajadas,horasTrabajadasStr);
+          ^~~
+../Employee.c:30:10: note: expected ‘char *’ but argument is of type ‘int’
+../Employee.c:31:10: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(emp->sueldo,sueldoStr);
+          ^~~
+../Employee.c:31:10: note: expected ‘char *’ but argument is of type ‘int’
+../Employee.c: In function ‘employee_setNombre’:
+../Employee.c:66:16: error: assignment to expression with array type
+   this->nombre = *nombre;
+                ^
+../Employee.c: In function ‘employee_getNombre’:
+../Employee.c:78:11: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+   *nombre = this->nombre;
+           ^
+subdir.mk:30: fallo en las instrucciones para el objetivo 'Employee.o'
+make: *** [Employee.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+21:21:07 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../Employee.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Employee.d" -MT"Employee.o" -o "Employee.o" "../Employee.c"
+../Employee.c: In function ‘employee_new’:
+../Employee.c:15:3: warning: implicit declaration of function ‘strcpy’ [-Wimplicit-function-declaration]
+   strcpy(emp->nombre,"");
+   ^~~~~~
+../Employee.c:15:3: warning: incompatible implicit declaration of built-in function ‘strcpy’
+../Employee.c:15:3: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
+../Employee.c: In function ‘employee_newParametros’:
+../Employee.c:28:3: warning: incompatible implicit declaration of built-in function ‘strcpy’
+   strcpy(emp->id,idStr);
+   ^~~~~~
+../Employee.c:28:3: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
+subdir.mk:30: fallo en las instrucciones para el objetivo 'Employee.o'
+../Employee.c:28:10: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(emp->id,idStr);
+          ^~~
+../Employee.c:28:10: note: expected ‘char *’ but argument is of type ‘int’
+../Employee.c:30:10: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(emp->horasTrabajadas,horasTrabajadasStr);
+          ^~~
+../Employee.c:30:10: note: expected ‘char *’ but argument is of type ‘int’
+../Employee.c:31:10: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(emp->sueldo,sueldoStr);
+          ^~~
+../Employee.c:31:10: note: expected ‘char *’ but argument is of type ‘int’
+../Employee.c: In function ‘employee_setNombre’:
+../Employee.c:66:16: error: assignment to expression with array type
+   this->nombre = *nombre;
+                ^
+../Employee.c: In function ‘employee_getNombre’:
+../Employee.c:78:11: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+   *nombre = this->nombre;
+           ^
+make: *** [Employee.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+21:23:29 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../Employee.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Employee.d" -MT"Employee.o" -o "Employee.o" "../Employee.c"
+../Employee.c: In function ‘employee_new’:
+../Employee.c:15:3: warning: implicit declaration of function ‘strcpy’ [-Wimplicit-function-declaration]
+   strcpy(emp->nombre,"");
+   ^~~~~~
+../Employee.c:15:3: warning: incompatible implicit declaration of built-in function ‘strcpy’
+../Employee.c:15:3: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
+../Employee.c: In function ‘employee_newParametros’:
+../Employee.c:28:3: warning: incompatible implicit declaration of built-in function ‘strcpy’
+   strcpy(emp->id,idStr);
+   ^~~~~~
+../Employee.c:28:3: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
+../Employee.c:28:10: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(emp->id,idStr);
+          ^~~
+../Employee.c:28:10: note: expected ‘char *’ but argument is of type ‘int’
+../Employee.c:30:10: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(emp->horasTrabajadas,horasTrabajadasStr);
+          ^~~
+../Employee.c:30:10: note: expected ‘char *’ but argument is of type ‘int’
+../Employee.c:31:10: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(emp->sueldo,sueldoStr);
+          ^~~
+../Employee.c:31:10: note: expected ‘char *’ but argument is of type ‘int’
+../Employee.c: In function ‘employee_setNombre’:
+../Employee.c:66:3: warning: incompatible implicit declaration of built-in function ‘strcpy’
+   strcpy(this->nombre,nombre);
+   ^~~~~~
+../Employee.c:66:3: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
+../Employee.c: In function ‘employee_getNombre’:
+../Employee.c:78:3: warning: incompatible implicit declaration of built-in function ‘strcpy’
+   strcpy(nombre,this->nombre);
+   ^~~~~~
+../Employee.c:78:3: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
+Finished building: ../Employee.c
+ 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+../parser.c: In function ‘parser_EmployeeFromText’:
+../parser.c:30:23: warning: implicit declaration of function ‘employee_newParametro’ [-Wimplicit-function-declaration]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+                       ^~~~~~~~~~~~~~~~~~~~~
+../parser.c:30:21: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+                     ^
+../parser.c: In function ‘parser_EmployeeFromBinary’:
+../parser.c:61:45: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+    if(!employee_setId(pEmployee, auxEmployee.id) &&
+                                             ^
+                                             ->
+../parser.c:62:48: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+subdir.mk:30: fallo en las instrucciones para el objetivo 'parser.o'
+      !employee_setNombre(pEmployee, auxEmployee.nombre) &&
+                                                ^
+                                                ->
+../parser.c:63:57: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setHorasTrabajadas(pEmployee, auxEmployee.horasTrabajadas) &&
+                                                         ^
+                                                         ->
+../parser.c:64:48: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setSueldo(pEmployee, auxEmployee.sueldo))
+                                                ^
+                                                ->
+make: *** [parser.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+21:23:32 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+../parser.c: In function ‘parser_EmployeeFromText’:
+../parser.c:30:23: warning: implicit declaration of function ‘employee_newParametro’ [-Wimplicit-function-declaration]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+                       ^~~~~~~~~~~~~~~~~~~~~
+../parser.c:30:21: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+subdir.mk:30: fallo en las instrucciones para el objetivo 'parser.o'
+                     ^
+../parser.c: In function ‘parser_EmployeeFromBinary’:
+../parser.c:61:45: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+    if(!employee_setId(pEmployee, auxEmployee.id) &&
+                                             ^
+                                             ->
+../parser.c:62:48: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setNombre(pEmployee, auxEmployee.nombre) &&
+                                                ^
+                                                ->
+../parser.c:63:57: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setHorasTrabajadas(pEmployee, auxEmployee.horasTrabajadas) &&
+                                                         ^
+                                                         ->
+../parser.c:64:48: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setSueldo(pEmployee, auxEmployee.sueldo))
+                                                ^
+                                                ->
+make: *** [parser.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+21:23:35 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+../parser.c: In function ‘parser_EmployeeFromText’:
+../parser.c:30:23: warning: implicit declaration of function ‘employee_newParametro’ [-Wimplicit-function-declaration]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+                       ^~~~~~~~~~~~~~~~~~~~~
+../parser.c:30:21: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+subdir.mk:30: fallo en las instrucciones para el objetivo 'parser.o'
+                     ^
+../parser.c: In function ‘parser_EmployeeFromBinary’:
+../parser.c:61:45: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+    if(!employee_setId(pEmployee, auxEmployee.id) &&
+                                             ^
+                                             ->
+../parser.c:62:48: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setNombre(pEmployee, auxEmployee.nombre) &&
+                                                ^
+                                                ->
+../parser.c:63:57: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setHorasTrabajadas(pEmployee, auxEmployee.horasTrabajadas) &&
+                                                         ^
+                                                         ->
+../parser.c:64:48: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setSueldo(pEmployee, auxEmployee.sueldo))
+                                                ^
+                                                ->
+make: *** [parser.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+21:27:34 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../Employee.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Employee.d" -MT"Employee.o" -o "Employee.o" "../Employee.c"
+../Employee.c: In function ‘employee_new’:
+../Employee.c:15:3: warning: implicit declaration of function ‘strcpy’ [-Wimplicit-function-declaration]
+   strcpy(emp->nombre,"");
+   ^~~~~~
+../Employee.c:15:3: warning: incompatible implicit declaration of built-in function ‘strcpy’
+../Employee.c:15:3: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
+../Employee.c: In function ‘employee_newParametros’:
+../Employee.c:28:3: warning: incompatible implicit declaration of built-in function ‘strcpy’
+   strcpy(emp->id,idStr);
+   ^~~~~~
+../Employee.c:28:3: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
+../Employee.c:28:10: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(emp->id,idStr);
+          ^~~
+../Employee.c:28:10: note: expected ‘char *’ but argument is of type ‘int’
+../Employee.c:30:10: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(emp->horasTrabajadas,horasTrabajadasStr);
+          ^~~
+../Employee.c:30:10: note: expected ‘char *’ but argument is of type ‘int’
+../Employee.c:31:10: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(emp->sueldo,sueldoStr);
+          ^~~
+../Employee.c:31:10: note: expected ‘char *’ but argument is of type ‘int’
+../Employee.c: In function ‘employee_setNombre’:
+../Employee.c:66:3: warning: incompatible implicit declaration of built-in function ‘strcpy’
+   strcpy(this->nombre,nombre);
+   ^~~~~~
+../Employee.c:66:3: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
+../Employee.c: In function ‘employee_getNombre’:
+../Employee.c:78:3: warning: incompatible implicit declaration of built-in function ‘strcpy’
+   strcpy(nombre,this->nombre);
+   ^~~~~~
+../Employee.c:78:3: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
+Finished building: ../Employee.c
+ 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+../parser.c: In function ‘parser_EmployeeFromText’:
+../parser.c:30:23: warning: implicit declaration of function ‘employee_newParametro’ [-Wimplicit-function-declaration]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+                       ^~~~~~~~~~~~~~~~~~~~~
+../parser.c:30:21: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+                     ^
+../parser.c: In function ‘parser_EmployeeFromBinary’:
+../parser.c:66:45: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+    if(!employee_setId(pEmployee, auxEmployee.bufferId) &&
+                                             ^
+                                             ->
+../parser.c:67:48: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setNombre(pEmployee, auxEmployee.bufferNombre) &&
+                                                ^
+                                                ->
+../parser.c:68:57: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+subdir.mk:30: fallo en las instrucciones para el objetivo 'parser.o'
+      !employee_setHorasTrabajadas(pEmployee, auxEmployee.bufferHorasTrabajadas) &&
+                                                         ^
+                                                         ->
+../parser.c:69:48: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setSueldo(pEmployee, auxEmployee.bufferSueldo))
+                                                ^
+                                                ->
+../parser.c:55:6: warning: unused variable ‘bufferSueldo’ [-Wunused-variable]
+  int bufferSueldo;
+      ^~~~~~~~~~~~
+../parser.c:54:6: warning: unused variable ‘bufferHorasTrabajadas’ [-Wunused-variable]
+  int bufferHorasTrabajadas;
+      ^~~~~~~~~~~~~~~~~~~~~
+../parser.c:53:7: warning: unused variable ‘bufferNombre’ [-Wunused-variable]
+  char bufferNombre;
+       ^~~~~~~~~~~~
+../parser.c:52:6: warning: unused variable ‘bufferId’ [-Wunused-variable]
+  int bufferId;
+      ^~~~~~~~
+make: *** [parser.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+21:27:59 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+../parser.c: In function ‘parser_EmployeeFromText’:
+../parser.c:30:23: warning: implicit declaration of function ‘employee_newParametro’ [-Wimplicit-function-declaration]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+                       ^~~~~~~~~~~~~~~~~~~~~
+../parser.c:30:21: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+                     ^
+../parser.c: In function ‘parser_EmployeeFromBinary’:
+../parser.c:66:46: error: expected identifier before ‘&’ token
+    if(!employee_setId(pEmployee, auxEmployee.&bufferId) &&
+subdir.mk:30: fallo en las instrucciones para el objetivo 'parser.o'
+                                              ^
+../parser.c:67:48: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      !employee_setNombre(pEmployee, auxEmployee.bufferNombre) &&
+                                                ^
+                                                ->
+../parser.c:68:58: error: expected identifier before ‘&’ token
+      !employee_setHorasTrabajadas(pEmployee, auxEmployee.&bufferHorasTrabajadas) &&
+                                                          ^
+../parser.c:69:49: error: expected identifier before ‘&’ token
+      !employee_setSueldo(pEmployee, auxEmployee.&bufferSueldo))
+                                                 ^
+../parser.c:55:6: warning: unused variable ‘bufferSueldo’ [-Wunused-variable]
+  int bufferSueldo;
+      ^~~~~~~~~~~~
+../parser.c:54:6: warning: unused variable ‘bufferHorasTrabajadas’ [-Wunused-variable]
+  int bufferHorasTrabajadas;
+      ^~~~~~~~~~~~~~~~~~~~~
+../parser.c:53:7: warning: unused variable ‘bufferNombre’ [-Wunused-variable]
+  char bufferNombre;
+       ^~~~~~~~~~~~
+../parser.c:52:6: warning: unused variable ‘bufferId’ [-Wunused-variable]
+  int bufferId;
+      ^~~~~~~~
+make: *** [parser.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+21:28:51 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+../parser.c: In function ‘parser_EmployeeFromText’:
+../parser.c:30:23: warning: implicit declaration of function ‘employee_newParametro’ [-Wimplicit-function-declaration]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+                       ^~~~~~~~~~~~~~~~~~~~~
+../parser.c:30:21: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+                     ^
+../parser.c: In function ‘parser_EmployeeFromBinary’:
+../parser.c:66:42: error: expected identifier before ‘&’ token
+    employee_setId(pEmployee, auxEmployee.&bufferId);
+                                          ^
+../parser.c:67:47: error: ‘auxEmployee’ is a pointer; did you mean to use ‘->’?
+      employee_setNombre(pEmployee, auxEmployee.bufferNombre);
+                                               ^
+                                               ->
+../parser.c:68:57: error: expected identifier before ‘&’ token
+      employee_setHorasTrabajadas(pEmployee, auxEmployee.&bufferHorasTrabajadas);
+                                                         ^
+../parser.c:69:48: error: expected identifier before ‘&’ token
+      employee_setSueldo(pEmployee, auxEmployee.&bufferSueldo);
+                                                ^
+../parser.c:55:6: warning: unused variable ‘bufferSueldo’ [-Wunused-variable]
+  int bufferSueldo;
+      ^~~~~~~~~~~~
+../parser.c:54:6: warning: unused variable ‘bufferHorasTrabajadas’ [-Wunused-variable]
+  int bufferHorasTrabajadas;
+      ^~~~~~~~~~~~~~~~~~~~~
+../parser.c:53:7: warning: unused variable ‘bufferNombre’ [-Wunused-variable]
+  char bufferNombre;
+       ^~~~~~~~~~~~
+../parser.c:52:6: warning: unused variable ‘bufferId’ [-Wunused-variable]
+  int bufferId;
+      ^~~~~~~~
+subdir.mk:30: fallo en las instrucciones para el objetivo 'parser.o'
+make: *** [parser.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+21:29:48 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+../parser.c: In function ‘parser_EmployeeFromText’:
+../parser.c:30:23: warning: implicit declaration of function ‘employee_newParametro’ [-Wimplicit-function-declaration]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+                       ^~~~~~~~~~~~~~~~~~~~~
+../parser.c:30:21: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+                     ^
+../parser.c: In function ‘parser_EmployeeFromBinary’:
+../parser.c:65:11: error: ‘auxEmployee’ undeclared (first use in this function)
+    fread(&auxEmployee, sizeof(Employee),1,pFile);
+           ^~~~~~~~~~~
+../parser.c:65:11: note: each undeclared identifier is reported only once for each function it appears in
+../parser.c:66:42: error: expected identifier before ‘&’ token
+    employee_setId(pEmployee, auxEmployee.&bufferId);
+                                          ^
+../parser.c:68:55: error: expected identifier before ‘&’ token
+    employee_setHorasTrabajadas(pEmployee, auxEmployee.&bufferHorasTrabajadas);
+                                                       ^
+../parser.c:69:46: error: expected identifier before ‘&’ token
+    employee_setSueldo(pEmployee, auxEmployee.&bufferSueldo);
+                                              ^
+../parser.c:55:6: warning: unused variable ‘bufferSueldo’ [-Wunused-variable]
+  int bufferSueldo;
+      ^~~~~~~~~~~~
+../parser.c:54:6: warning: unused variable ‘bufferHorasTrabajadas’ [-Wunused-variable]
+  int bufferHorasTrabajadas;
+      ^~~~~~~~~~~~~~~~~~~~~
+../parser.c:53:7: warning: unused variable ‘bufferNombre’ [-Wunused-variable]
+  char bufferNombre;
+       ^~~~~~~~~~~~
+../parser.c:52:6: warning: unused variable ‘bufferId’ [-Wunused-variable]
+  int bufferId;
+      ^~~~~~~~
+make: *** [parser.o] Error 1
+subdir.mk:30: fallo en las instrucciones para el objetivo 'parser.o'
+"make all" terminated with exit code 2. Build might be incomplete.
+21:30:49 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+../parser.c: In function ‘parser_EmployeeFromText’:
+../parser.c:30:23: warning: implicit declaration of function ‘employee_newParametro’ [-Wimplicit-function-declaration]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+                       ^~~~~~~~~~~~~~~~~~~~~
+../parser.c:30:21: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+                     ^
+../parser.c: In function ‘parser_EmployeeFromBinary’:
+../parser.c:66:30: warning: passing argument 2 of ‘employee_setId’ makes integer from pointer without a cast [-Wint-conversion]
+    employee_setId(pEmployee, &bufferId);
+                              ^
+In file included from ../parser.c:4:0:
+../Employee.h:18:5: note: expected ‘int’ but argument is of type ‘int *’
+ int employee_setId(Employee* this,int id);
+     ^~~~~~~~~~~~~~
+../parser.c:67:33: warning: passing argument 2 of ‘employee_setNombre’ makes pointer from integer without a cast [-Wint-conversion]
+    employee_setNombre(pEmployee,bufferNombre);
+                                 ^~~~~~~~~~~~
+In file included from ../parser.c:4:0:
+../Employee.h:21:5: note: expected ‘char *’ but argument is of type ‘char’
+ int employee_setNombre(Employee* this,char* nombre);
+     ^~~~~~~~~~~~~~~~~~
+../parser.c:68:42: warning: passing argument 2 of ‘employee_setHorasTrabajadas’ makes integer from pointer without a cast [-Wint-conversion]
+    employee_setHorasTrabajadas(pEmployee,&bufferHorasTrabajadas);
+                                          ^
+In file included from ../parser.c:4:0:
+../Employee.h:24:5: note: expected ‘int’ but argument is of type ‘int *’
+ int employee_setHorasTrabajadas(Employee* this,int horasTrabajadas);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../parser.c:69:33: warning: passing argument 2 of ‘employee_setSueldo’ makes integer from pointer without a cast [-Wint-conversion]
+    employee_setSueldo(pEmployee,&bufferSueldo);
+                                 ^
+In file included from ../parser.c:4:0:
+../Employee.h:27:5: note: expected ‘int’ but argument is of type ‘int *’
+ int employee_setSueldo(Employee* this,int sueldo);
+     ^~~~~~~~~~~~~~~~~~
+../parser.c:67:4: warning: ‘bufferNombre’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+    employee_setNombre(pEmployee,bufferNombre);
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../parser.c
+ 
+Building file: ../utn.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"utn.d" -MT"utn.o" -o "utn.o" "../utn.c"
+Finished building: ../utn.c
+ 
+Building target: tp3_linux
+Invoking: GCC C Linker
+gcc  -o "tp3_linux"  ./Controller.o ./Employee.o ./main.o ./parser.o ./utn.o    /home/alumno/Imágenes/eclipse_tp3/tp3_linux/LinkedList.a
+./parser.o: En la función `parser_EmployeeFromText':
+/home/alumno/Imágenes/eclipse_tp3/tp3_linux/Debug/../parser.c:30: referencia a `employee_newParametro' sin definir
+makefile:29: fallo en las instrucciones para el objetivo 'tp3_linux'
+collect2: error: ld returned 1 exit status
+make: *** [tp3_linux] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+21:33:37 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+../parser.c: In function ‘parser_EmployeeFromText’:
+../parser.c:30:23: warning: implicit declaration of function ‘employee_newParametro’ [-Wimplicit-function-declaration]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+                       ^~~~~~~~~~~~~~~~~~~~~
+../parser.c:30:21: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+                     ^
+../parser.c: In function ‘parser_EmployeeFromBinary’:
+../parser.c:66:30: warning: passing argument 2 of ‘employee_setId’ makes integer from pointer without a cast [-Wint-conversion]
+    employee_setId(pEmployee, &bufferId);
+                              ^
+In file included from ../parser.c:4:0:
+../Employee.h:18:5: note: expected ‘int’ but argument is of type ‘int *’
+ int employee_setId(Employee* this,int id);
+     ^~~~~~~~~~~~~~
+../parser.c:67:33: warning: passing argument 2 of ‘employee_setNombre’ makes pointer from integer without a cast [-Wint-conversion]
+    employee_setNombre(pEmployee,bufferNombre);
+                                 ^~~~~~~~~~~~
+In file included from ../parser.c:4:0:
+../Employee.h:21:5: note: expected ‘char *’ but argument is of type ‘char’
+ int employee_setNombre(Employee* this,char* nombre);
+     ^~~~~~~~~~~~~~~~~~
+../parser.c:68:42: warning: passing argument 2 of ‘employee_setHorasTrabajadas’ makes integer from pointer without a cast [-Wint-conversion]
+    employee_setHorasTrabajadas(pEmployee,&bufferHorasTrabajadas);
+                                          ^
+In file included from ../parser.c:4:0:
+../Employee.h:24:5: note: expected ‘int’ but argument is of type ‘int *’
+ int employee_setHorasTrabajadas(Employee* this,int horasTrabajadas);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../parser.c:69:33: warning: passing argument 2 of ‘employee_setSueldo’ makes integer from pointer without a cast [-Wint-conversion]
+    employee_setSueldo(pEmployee,&bufferSueldo);
+                                 ^
+In file included from ../parser.c:4:0:
+../Employee.h:27:5: note: expected ‘int’ but argument is of type ‘int *’
+ int employee_setSueldo(Employee* this,int sueldo);
+     ^~~~~~~~~~~~~~~~~~
+../parser.c:70:23: warning: implicit declaration of function ‘strlen’ [-Wimplicit-function-declaration]
+    if(bufferId >=0 && strlen(bufferNombre) && bufferHorasTrabajadas >=0 && bufferSueldo >=0)
+                       ^~~~~~
+../parser.c:70:23: warning: incompatible implicit declaration of built-in function ‘strlen’
+../parser.c:70:23: note: include ‘<string.h>’ or provide a declaration of ‘strlen’
+../parser.c:70:30: warning: passing argument 1 of ‘strlen’ makes pointer from integer without a cast [-Wint-conversion]
+    if(bufferId >=0 && strlen(bufferNombre) && bufferHorasTrabajadas >=0 && bufferSueldo >=0)
+                              ^~~~~~~~~~~~
+../parser.c:70:30: note: expected ‘const char *’ but argument is of type ‘char’
+../parser.c:67:4: warning: ‘bufferNombre’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+    employee_setNombre(pEmployee,bufferNombre);
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../parser.c
+ 
+Building target: tp3_linux
+Invoking: GCC C Linker
+gcc  -o "tp3_linux"  ./Controller.o ./Employee.o ./main.o ./parser.o ./utn.o    /home/alumno/Imágenes/eclipse_tp3/tp3_linux/LinkedList.a
+./parser.o: En la función `parser_EmployeeFromText':
+/home/alumno/Imágenes/eclipse_tp3/tp3_linux/Debug/../parser.c:30: referencia a `employee_newParametro' sin definir
+makefile:29: fallo en las instrucciones para el objetivo 'tp3_linux'
+collect2: error: ld returned 1 exit status
+make: *** [tp3_linux] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+21:34:29 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+Finished building: ../Controller.c
+ 
+Building file: ../Employee.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Employee.d" -MT"Employee.o" -o "Employee.o" "../Employee.c"
+../Employee.c: In function ‘employee_new’:
+../Employee.c:15:3: warning: implicit declaration of function ‘strcpy’ [-Wimplicit-function-declaration]
+   strcpy(emp->nombre,"");
+   ^~~~~~
+../Employee.c:15:3: warning: incompatible implicit declaration of built-in function ‘strcpy’
+../Employee.c:15:3: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
+../Employee.c: In function ‘employee_newParametros’:
+../Employee.c:28:3: warning: incompatible implicit declaration of built-in function ‘strcpy’
+   strcpy(emp->id,idStr);
+   ^~~~~~
+../Employee.c:28:3: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
+../Employee.c:28:10: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(emp->id,idStr);
+          ^~~
+../Employee.c:28:10: note: expected ‘char *’ but argument is of type ‘int’
+../Employee.c:30:10: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(emp->horasTrabajadas,horasTrabajadasStr);
+          ^~~
+../Employee.c:30:10: note: expected ‘char *’ but argument is of type ‘int’
+../Employee.c:31:10: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(emp->sueldo,sueldoStr);
+          ^~~
+../Employee.c:31:10: note: expected ‘char *’ but argument is of type ‘int’
+../Employee.c: In function ‘employee_setNombre’:
+../Employee.c:66:3: warning: incompatible implicit declaration of built-in function ‘strcpy’
+   strcpy(this->nombre,nombre);
+   ^~~~~~
+../Employee.c:66:3: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
+../Employee.c: In function ‘employee_getNombre’:
+../Employee.c:78:3: warning: incompatible implicit declaration of built-in function ‘strcpy’
+   strcpy(nombre,this->nombre);
+   ^~~~~~
+../Employee.c:78:3: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
+Finished building: ../Employee.c
+ 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+../parser.c: In function ‘parser_EmployeeFromText’:
+../parser.c:30:23: warning: implicit declaration of function ‘employee_newParametro’ [-Wimplicit-function-declaration]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+                       ^~~~~~~~~~~~~~~~~~~~~
+../parser.c:30:21: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+                     ^
+../parser.c: In function ‘parser_EmployeeFromBinary’:
+../parser.c:66:30: warning: passing argument 2 of ‘employee_setId’ makes integer from pointer without a cast [-Wint-conversion]
+    employee_setId(pEmployee, &bufferId);
+                              ^
+In file included from ../parser.c:4:0:
+../Employee.h:18:5: note: expected ‘int’ but argument is of type ‘int *’
+ int employee_setId(Employee* this,int id);
+     ^~~~~~~~~~~~~~
+../parser.c:67:33: warning: passing argument 2 of ‘employee_setNombre’ makes pointer from integer without a cast [-Wint-conversion]
+    employee_setNombre(pEmployee,bufferNombre);
+                                 ^~~~~~~~~~~~
+In file included from ../parser.c:4:0:
+../Employee.h:21:5: note: expected ‘char *’ but argument is of type ‘char’
+ int employee_setNombre(Employee* this,char* nombre);
+     ^~~~~~~~~~~~~~~~~~
+../parser.c:68:42: warning: passing argument 2 of ‘employee_setHorasTrabajadas’ makes integer from pointer without a cast [-Wint-conversion]
+    employee_setHorasTrabajadas(pEmployee,&bufferHorasTrabajadas);
+                                          ^
+In file included from ../parser.c:4:0:
+../Employee.h:24:5: note: expected ‘int’ but argument is of type ‘int *’
+ int employee_setHorasTrabajadas(Employee* this,int horasTrabajadas);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../parser.c:69:33: warning: passing argument 2 of ‘employee_setSueldo’ makes integer from pointer without a cast [-Wint-conversion]
+    employee_setSueldo(pEmployee,&bufferSueldo);
+                                 ^
+In file included from ../parser.c:4:0:
+../Employee.h:27:5: note: expected ‘int’ but argument is of type ‘int *’
+ int employee_setSueldo(Employee* this,int sueldo);
+     ^~~~~~~~~~~~~~~~~~
+../parser.c:70:23: warning: implicit declaration of function ‘strlen’ [-Wimplicit-function-declaration]
+    if(bufferId >=0 && strlen(bufferNombre) && bufferHorasTrabajadas >=0 && bufferSueldo >=0)
+                       ^~~~~~
+../parser.c:70:23: warning: incompatible implicit declaration of built-in function ‘strlen’
+../parser.c:70:23: note: include ‘<string.h>’ or provide a declaration of ‘strlen’
+../parser.c:70:30: warning: passing argument 1 of ‘strlen’ makes pointer from integer without a cast [-Wint-conversion]
+    if(bufferId >=0 && strlen(bufferNombre) && bufferHorasTrabajadas >=0 && bufferSueldo >=0)
+                              ^~~~~~~~~~~~
+../parser.c:70:30: note: expected ‘const char *’ but argument is of type ‘char’
+../parser.c:67:4: warning: ‘bufferNombre’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+    employee_setNombre(pEmployee,bufferNombre);
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../parser.c
+ 
+Building target: tp3_linux
+Invoking: GCC C Linker
+gcc  -o "tp3_linux"  ./Controller.o ./Employee.o ./main.o ./parser.o ./utn.o    /home/alumno/Imágenes/eclipse_tp3/tp3_linux/LinkedList.a
+./parser.o: En la función `parser_EmployeeFromText':
+/home/alumno/Imágenes/eclipse_tp3/tp3_linux/Debug/../parser.c:30: referencia a `employee_newParametro' sin definir
+collect2: error: ld returned 1 exit status
+makefile:29: fallo en las instrucciones para el objetivo 'tp3_linux'
+make: *** [tp3_linux] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.

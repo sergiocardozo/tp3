@@ -1,0 +1,115 @@
+21:34:29 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+Finished building: ../Controller.c
+ 
+Building file: ../Employee.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Employee.d" -MT"Employee.o" -o "Employee.o" "../Employee.c"
+../Employee.c: In function ‘employee_new’:
+../Employee.c:15:3: warning: implicit declaration of function ‘strcpy’ [-Wimplicit-function-declaration]
+   strcpy(emp->nombre,"");
+   ^~~~~~
+../Employee.c:15:3: warning: incompatible implicit declaration of built-in function ‘strcpy’
+../Employee.c:15:3: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
+../Employee.c: In function ‘employee_newParametros’:
+../Employee.c:28:3: warning: incompatible implicit declaration of built-in function ‘strcpy’
+   strcpy(emp->id,idStr);
+   ^~~~~~
+../Employee.c:28:3: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
+../Employee.c:28:10: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(emp->id,idStr);
+          ^~~
+../Employee.c:28:10: note: expected ‘char *’ but argument is of type ‘int’
+../Employee.c:30:10: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(emp->horasTrabajadas,horasTrabajadasStr);
+          ^~~
+../Employee.c:30:10: note: expected ‘char *’ but argument is of type ‘int’
+../Employee.c:31:10: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(emp->sueldo,sueldoStr);
+          ^~~
+../Employee.c:31:10: note: expected ‘char *’ but argument is of type ‘int’
+../Employee.c: In function ‘employee_setNombre’:
+../Employee.c:66:3: warning: incompatible implicit declaration of built-in function ‘strcpy’
+   strcpy(this->nombre,nombre);
+   ^~~~~~
+../Employee.c:66:3: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
+../Employee.c: In function ‘employee_getNombre’:
+../Employee.c:78:3: warning: incompatible implicit declaration of built-in function ‘strcpy’
+   strcpy(nombre,this->nombre);
+   ^~~~~~
+../Employee.c:78:3: note: include ‘<string.h>’ or provide a declaration of ‘strcpy’
+Finished building: ../Employee.c
+ 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+../parser.c: In function ‘parser_EmployeeFromText’:
+../parser.c:30:23: warning: implicit declaration of function ‘employee_newParametro’ [-Wimplicit-function-declaration]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+                       ^~~~~~~~~~~~~~~~~~~~~
+../parser.c:30:21: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+    pAuxListEmployee = employee_newParametro(bufferId,bufferNombre,bufferHorasTrabajadas,bufferSueldo);
+                     ^
+../parser.c: In function ‘parser_EmployeeFromBinary’:
+../parser.c:66:30: warning: passing argument 2 of ‘employee_setId’ makes integer from pointer without a cast [-Wint-conversion]
+    employee_setId(pEmployee, &bufferId);
+                              ^
+In file included from ../parser.c:4:0:
+../Employee.h:18:5: note: expected ‘int’ but argument is of type ‘int *’
+ int employee_setId(Employee* this,int id);
+     ^~~~~~~~~~~~~~
+../parser.c:67:33: warning: passing argument 2 of ‘employee_setNombre’ makes pointer from integer without a cast [-Wint-conversion]
+    employee_setNombre(pEmployee,bufferNombre);
+                                 ^~~~~~~~~~~~
+In file included from ../parser.c:4:0:
+../Employee.h:21:5: note: expected ‘char *’ but argument is of type ‘char’
+ int employee_setNombre(Employee* this,char* nombre);
+     ^~~~~~~~~~~~~~~~~~
+../parser.c:68:42: warning: passing argument 2 of ‘employee_setHorasTrabajadas’ makes integer from pointer without a cast [-Wint-conversion]
+    employee_setHorasTrabajadas(pEmployee,&bufferHorasTrabajadas);
+                                          ^
+In file included from ../parser.c:4:0:
+../Employee.h:24:5: note: expected ‘int’ but argument is of type ‘int *’
+ int employee_setHorasTrabajadas(Employee* this,int horasTrabajadas);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../parser.c:69:33: warning: passing argument 2 of ‘employee_setSueldo’ makes integer from pointer without a cast [-Wint-conversion]
+    employee_setSueldo(pEmployee,&bufferSueldo);
+                                 ^
+In file included from ../parser.c:4:0:
+../Employee.h:27:5: note: expected ‘int’ but argument is of type ‘int *’
+ int employee_setSueldo(Employee* this,int sueldo);
+     ^~~~~~~~~~~~~~~~~~
+../parser.c:70:23: warning: implicit declaration of function ‘strlen’ [-Wimplicit-function-declaration]
+    if(bufferId >=0 && strlen(bufferNombre) && bufferHorasTrabajadas >=0 && bufferSueldo >=0)
+                       ^~~~~~
+../parser.c:70:23: warning: incompatible implicit declaration of built-in function ‘strlen’
+../parser.c:70:23: note: include ‘<string.h>’ or provide a declaration of ‘strlen’
+../parser.c:70:30: warning: passing argument 1 of ‘strlen’ makes pointer from integer without a cast [-Wint-conversion]
+    if(bufferId >=0 && strlen(bufferNombre) && bufferHorasTrabajadas >=0 && bufferSueldo >=0)
+                              ^~~~~~~~~~~~
+../parser.c:70:30: note: expected ‘const char *’ but argument is of type ‘char’
+../parser.c:67:4: warning: ‘bufferNombre’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+    employee_setNombre(pEmployee,bufferNombre);
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../parser.c
+ 
+Building target: tp3_linux
+Invoking: GCC C Linker
+gcc  -o "tp3_linux"  ./Controller.o ./Employee.o ./main.o ./parser.o ./utn.o    /home/alumno/Imágenes/eclipse_tp3/tp3_linux/LinkedList.a
+./parser.o: En la función `parser_EmployeeFromText':
+/home/alumno/Imágenes/eclipse_tp3/tp3_linux/Debug/../parser.c:30: referencia a `employee_newParametro' sin definir
+collect2: error: ld returned 1 exit status
+makefile:29: fallo en las instrucciones para el objetivo 'tp3_linux'
+make: *** [tp3_linux] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+
+21:34:30 Build Failed. 3 errors, 18 warnings. (took 421ms)
+
