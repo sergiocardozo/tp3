@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "LinkedList.h"
 #include "Controller.h"
 #include "Employee.h"
@@ -21,16 +22,33 @@ Employee* employee_new()
 
 Employee* employee_newParametros(char* idStr,char* nombreStr,char* horasTrabajadasStr, char* sueldoStr)
 {
-	Employee* emp = (Employee*)malloc(sizeof(Employee));
+	Employee* newEmployee = employee_new();
 
-	if(emp != NULL)
+	int bufferId;
+	int bufferHorasTrabajadas;
+	int bufferSueldos;
+
+	bufferId = atoi(idStr);
+	bufferHorasTrabajadas = atoi(horasTrabajadasStr);
+	bufferSueldos = atoi(sueldoStr);
+
+	if(newEmployee != NULL && idStr != NULL && nombreStr != NULL && horasTrabajadasStr != NULL && sueldoStr != NULL)
+	    {
+	        employee_setNombre(newEmployee, nombreStr);
+	        employee_setId(newEmployee, bufferId);
+	        employee_setHorasTrabajadas(newEmployee, bufferHorasTrabajadas);
+	        employee_setSueldo(newEmployee, bufferSueldos);
+	    }
+
+	    return newEmployee;
+}
+
+void employee_delete(Employee* this)
+{
+	if(this != NULL)
 	{
-		strcpy(emp->id,idStr);
-		strcpy(emp->nombre,nombreStr);
-		strcpy(emp->horasTrabajadas,horasTrabajadasStr);
-		strcpy(emp->sueldo,sueldoStr);
+		free(this);
 	}
-	return emp;
 }
 
 int employee_setId(Employee* this,int id)

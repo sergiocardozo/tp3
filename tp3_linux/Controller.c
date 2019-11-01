@@ -1,9 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "LinkedList.h"
 #include "Employee.h"
+#include "parser.h"
 
-
+static int generarId(void)
+{
+	static int id = 0;
+	return id++;
+}
 /** \brief Carga los datos de los empleados desde el archivo data.csv (modo texto).
  *
  * \param path char*
@@ -13,7 +19,16 @@
  */
 int controller_loadFromText(char* path , LinkedList* pArrayListEmployee)
 {
-    return 1;
+
+	int retorno = -1;
+
+	FILE* pArchivo;
+
+	pArchivo = fopen(path,"r");
+	parser_EmployeeFromText(pArchivo,pArrayListEmployee);
+	fclose(pArchivo);
+
+    return retorno;
 }
 
 /** \brief Carga los datos de los empleados desde el archivo data.csv (modo binario).
@@ -25,7 +40,16 @@ int controller_loadFromText(char* path , LinkedList* pArrayListEmployee)
  */
 int controller_loadFromBinary(char* path , LinkedList* pArrayListEmployee)
 {
-    return 1;
+	int retorno = 0;
+
+	FILE* pArch;
+
+	pArch = fopen(path,"rb");
+	parser_EmployeeFromBinary(pArch,pArrayListEmployee);
+
+	fclose(pArch);
+
+    return retorno;
 }
 
 /** \brief Alta de empleados
@@ -37,7 +61,24 @@ int controller_loadFromBinary(char* path , LinkedList* pArrayListEmployee)
  */
 int controller_addEmployee(LinkedList* pArrayListEmployee)
 {
-    return 1;
+	Employee* pEmpleados;
+	pEmpleados = employee_new();
+
+	int auxId = 0;
+	char auxNombre[50];
+	int auxSueldo;
+	int auxHorasTrabajadas;
+	int ret = -1;
+
+	if(pArrayListEmployee != NULL)
+	{
+
+
+		ret = 0;
+	}
+
+	return ret;
+
 }
 
 /** \brief Modificar datos de empleado

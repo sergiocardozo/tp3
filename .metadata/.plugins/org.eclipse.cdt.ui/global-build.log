@@ -1184,3 +1184,961 @@ collect2: error: ld returned 1 exit status
 makefile:29: fallo en las instrucciones para el objetivo 'tp3_linux'
 make: *** [tp3_linux] Error 1
 "make all" terminated with exit code 2. Build might be incomplete.
+18:30:31 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../Employee.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Employee.d" -MT"Employee.o" -o "Employee.o" "../Employee.c"
+../Employee.c: In function ‘employee_newParametros’:
+../Employee.c:29:10: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(emp->id,idStr);
+          ^~~
+In file included from ../Employee.c:3:0:
+/usr/include/string.h:125:14: note: expected ‘char * restrict’ but argument is of type ‘int’
+ extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+              ^~~~~~
+../Employee.c:31:10: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(emp->horasTrabajadas,horasTrabajadasStr);
+          ^~~
+In file included from ../Employee.c:3:0:
+/usr/include/string.h:125:14: note: expected ‘char * restrict’ but argument is of type ‘int’
+ extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+              ^~~~~~
+../Employee.c:32:10: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(emp->sueldo,sueldoStr);
+          ^~~
+In file included from ../Employee.c:3:0:
+/usr/include/string.h:125:14: note: expected ‘char * restrict’ but argument is of type ‘int’
+ extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+              ^~~~~~
+Finished building: ../Employee.c
+ 
+Building target: tp3_linux
+Invoking: GCC C Linker
+gcc  -o "tp3_linux"  ./Controller.o ./Employee.o ./main.o ./parser.o ./utn.o    /home/alumno/Imágenes/eclipse_tp3/tp3_linux/LinkedList.a
+./parser.o: En la función `parser_EmployeeFromText':
+/home/alumno/Imágenes/eclipse_tp3/tp3_linux/Debug/../parser.c:30: referencia a `employee_newParametro' sin definir
+collect2: error: ld returned 1 exit status
+makefile:29: fallo en las instrucciones para el objetivo 'tp3_linux'
+make: *** [tp3_linux] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:31:30 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building target: tp3_linux
+Invoking: GCC C Linker
+gcc  -o "tp3_linux"  ./Controller.o ./Employee.o ./main.o ./parser.o ./utn.o    /home/alumno/Imágenes/eclipse_tp3/tp3_linux/LinkedList.a
+./parser.o: En la función `parser_EmployeeFromText':
+/home/alumno/Imágenes/eclipse_tp3/tp3_linux/Debug/../parser.c:30: referencia a `employee_newParametro' sin definir
+makefile:29: fallo en las instrucciones para el objetivo 'tp3_linux'
+collect2: error: ld returned 1 exit status
+make: *** [tp3_linux] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+18:32:31 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+../parser.c: In function ‘parser_EmployeeFromBinary’:
+../parser.c:66:30: warning: passing argument 2 of ‘employee_setId’ makes integer from pointer without a cast [-Wint-conversion]
+    employee_setId(pEmployee, &bufferId);
+                              ^
+In file included from ../parser.c:4:0:
+../Employee.h:18:5: note: expected ‘int’ but argument is of type ‘int *’
+ int employee_setId(Employee* this,int id);
+     ^~~~~~~~~~~~~~
+../parser.c:67:33: warning: passing argument 2 of ‘employee_setNombre’ makes pointer from integer without a cast [-Wint-conversion]
+    employee_setNombre(pEmployee,bufferNombre);
+                                 ^~~~~~~~~~~~
+In file included from ../parser.c:4:0:
+../Employee.h:21:5: note: expected ‘char *’ but argument is of type ‘char’
+ int employee_setNombre(Employee* this,char* nombre);
+     ^~~~~~~~~~~~~~~~~~
+../parser.c:68:42: warning: passing argument 2 of ‘employee_setHorasTrabajadas’ makes integer from pointer without a cast [-Wint-conversion]
+    employee_setHorasTrabajadas(pEmployee,&bufferHorasTrabajadas);
+                                          ^
+In file included from ../parser.c:4:0:
+../Employee.h:24:5: note: expected ‘int’ but argument is of type ‘int *’
+ int employee_setHorasTrabajadas(Employee* this,int horasTrabajadas);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../parser.c:69:33: warning: passing argument 2 of ‘employee_setSueldo’ makes integer from pointer without a cast [-Wint-conversion]
+    employee_setSueldo(pEmployee,&bufferSueldo);
+                                 ^
+In file included from ../parser.c:4:0:
+../Employee.h:27:5: note: expected ‘int’ but argument is of type ‘int *’
+ int employee_setSueldo(Employee* this,int sueldo);
+     ^~~~~~~~~~~~~~~~~~
+../parser.c:70:23: warning: implicit declaration of function ‘strlen’ [-Wimplicit-function-declaration]
+    if(bufferId >=0 && strlen(bufferNombre) && bufferHorasTrabajadas >=0 && bufferSueldo >=0)
+                       ^~~~~~
+../parser.c:70:23: warning: incompatible implicit declaration of built-in function ‘strlen’
+../parser.c:70:23: note: include ‘<string.h>’ or provide a declaration of ‘strlen’
+../parser.c:70:30: warning: passing argument 1 of ‘strlen’ makes pointer from integer without a cast [-Wint-conversion]
+    if(bufferId >=0 && strlen(bufferNombre) && bufferHorasTrabajadas >=0 && bufferSueldo >=0)
+                              ^~~~~~~~~~~~
+../parser.c:70:30: note: expected ‘const char *’ but argument is of type ‘char’
+../parser.c:67:4: warning: ‘bufferNombre’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+    employee_setNombre(pEmployee,bufferNombre);
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../parser.c
+ 
+Building target: tp3_linux
+Invoking: GCC C Linker
+gcc  -o "tp3_linux"  ./Controller.o ./Employee.o ./main.o ./parser.o ./utn.o    /home/alumno/Imágenes/eclipse_tp3/tp3_linux/LinkedList.a
+Finished building target: tp3_linux
+ 
+18:32:47 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+../parser.c: In function ‘parser_EmployeeFromBinary’:
+../parser.c:67:33: warning: passing argument 2 of ‘employee_setNombre’ makes pointer from integer without a cast [-Wint-conversion]
+    employee_setNombre(pEmployee,bufferNombre);
+                                 ^~~~~~~~~~~~
+In file included from ../parser.c:4:0:
+../Employee.h:21:5: note: expected ‘char *’ but argument is of type ‘char’
+ int employee_setNombre(Employee* this,char* nombre);
+     ^~~~~~~~~~~~~~~~~~
+../parser.c:68:42: warning: passing argument 2 of ‘employee_setHorasTrabajadas’ makes integer from pointer without a cast [-Wint-conversion]
+    employee_setHorasTrabajadas(pEmployee,&bufferHorasTrabajadas);
+                                          ^
+In file included from ../parser.c:4:0:
+../Employee.h:24:5: note: expected ‘int’ but argument is of type ‘int *’
+ int employee_setHorasTrabajadas(Employee* this,int horasTrabajadas);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../parser.c:69:33: warning: passing argument 2 of ‘employee_setSueldo’ makes integer from pointer without a cast [-Wint-conversion]
+    employee_setSueldo(pEmployee,&bufferSueldo);
+                                 ^
+In file included from ../parser.c:4:0:
+../Employee.h:27:5: note: expected ‘int’ but argument is of type ‘int *’
+ int employee_setSueldo(Employee* this,int sueldo);
+     ^~~~~~~~~~~~~~~~~~
+../parser.c:70:23: warning: implicit declaration of function ‘strlen’ [-Wimplicit-function-declaration]
+    if(bufferId >=0 && strlen(bufferNombre) && bufferHorasTrabajadas >=0 && bufferSueldo >=0)
+                       ^~~~~~
+../parser.c:70:23: warning: incompatible implicit declaration of built-in function ‘strlen’
+../parser.c:70:23: note: include ‘<string.h>’ or provide a declaration of ‘strlen’
+../parser.c:70:30: warning: passing argument 1 of ‘strlen’ makes pointer from integer without a cast [-Wint-conversion]
+    if(bufferId >=0 && strlen(bufferNombre) && bufferHorasTrabajadas >=0 && bufferSueldo >=0)
+                              ^~~~~~~~~~~~
+../parser.c:70:30: note: expected ‘const char *’ but argument is of type ‘char’
+../parser.c:66:4: warning: ‘bufferId’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+    employee_setId(pEmployee,bufferId);
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../parser.c:67:4: warning: ‘bufferNombre’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+    employee_setNombre(pEmployee,bufferNombre);
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../parser.c
+ 
+Building target: tp3_linux
+Invoking: GCC C Linker
+gcc  -o "tp3_linux"  ./Controller.o ./Employee.o ./main.o ./parser.o ./utn.o    /home/alumno/Imágenes/eclipse_tp3/tp3_linux/LinkedList.a
+Finished building target: tp3_linux
+ 
+18:32:58 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+../parser.c: In function ‘parser_EmployeeFromBinary’:
+../parser.c:66:29: warning: passing argument 2 of ‘employee_setId’ makes integer from pointer without a cast [-Wint-conversion]
+    employee_setId(pEmployee,&bufferId);
+                             ^
+In file included from ../parser.c:4:0:
+../Employee.h:18:5: note: expected ‘int’ but argument is of type ‘int *’
+ int employee_setId(Employee* this,int id);
+     ^~~~~~~~~~~~~~
+../parser.c:67:33: warning: passing argument 2 of ‘employee_setNombre’ makes pointer from integer without a cast [-Wint-conversion]
+    employee_setNombre(pEmployee,bufferNombre);
+                                 ^~~~~~~~~~~~
+In file included from ../parser.c:4:0:
+../Employee.h:21:5: note: expected ‘char *’ but argument is of type ‘char’
+ int employee_setNombre(Employee* this,char* nombre);
+     ^~~~~~~~~~~~~~~~~~
+../parser.c:68:42: warning: passing argument 2 of ‘employee_setHorasTrabajadas’ makes integer from pointer without a cast [-Wint-conversion]
+    employee_setHorasTrabajadas(pEmployee,&bufferHorasTrabajadas);
+                                          ^
+In file included from ../parser.c:4:0:
+../Employee.h:24:5: note: expected ‘int’ but argument is of type ‘int *’
+ int employee_setHorasTrabajadas(Employee* this,int horasTrabajadas);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../parser.c:69:33: warning: passing argument 2 of ‘employee_setSueldo’ makes integer from pointer without a cast [-Wint-conversion]
+    employee_setSueldo(pEmployee,&bufferSueldo);
+                                 ^
+In file included from ../parser.c:4:0:
+../Employee.h:27:5: note: expected ‘int’ but argument is of type ‘int *’
+ int employee_setSueldo(Employee* this,int sueldo);
+     ^~~~~~~~~~~~~~~~~~
+../parser.c:70:23: warning: implicit declaration of function ‘strlen’ [-Wimplicit-function-declaration]
+    if(bufferId >=0 && strlen(bufferNombre) && bufferHorasTrabajadas >=0 && bufferSueldo >=0)
+                       ^~~~~~
+../parser.c:70:23: warning: incompatible implicit declaration of built-in function ‘strlen’
+../parser.c:70:23: note: include ‘<string.h>’ or provide a declaration of ‘strlen’
+../parser.c:70:30: warning: passing argument 1 of ‘strlen’ makes pointer from integer without a cast [-Wint-conversion]
+    if(bufferId >=0 && strlen(bufferNombre) && bufferHorasTrabajadas >=0 && bufferSueldo >=0)
+                              ^~~~~~~~~~~~
+../parser.c:70:30: note: expected ‘const char *’ but argument is of type ‘char’
+../parser.c:67:4: warning: ‘bufferNombre’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+    employee_setNombre(pEmployee,bufferNombre);
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../parser.c
+ 
+Building target: tp3_linux
+Invoking: GCC C Linker
+gcc  -o "tp3_linux"  ./Controller.o ./Employee.o ./main.o ./parser.o ./utn.o    /home/alumno/Imágenes/eclipse_tp3/tp3_linux/LinkedList.a
+Finished building target: tp3_linux
+ 
+18:42:19 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+../parser.c: In function ‘parser_EmployeeFromBinary’:
+../parser.c:55:6: warning: unused variable ‘bufferSueldo’ [-Wunused-variable]
+  int bufferSueldo;
+      ^~~~~~~~~~~~
+../parser.c:54:6: warning: unused variable ‘bufferHorasTrabajadas’ [-Wunused-variable]
+  int bufferHorasTrabajadas;
+      ^~~~~~~~~~~~~~~~~~~~~
+../parser.c:53:7: warning: unused variable ‘bufferNombre’ [-Wunused-variable]
+  char bufferNombre;
+       ^~~~~~~~~~~~
+../parser.c:52:6: warning: unused variable ‘bufferId’ [-Wunused-variable]
+  int bufferId;
+      ^~~~~~~~
+Finished building: ../parser.c
+ 
+Building target: tp3_linux
+Invoking: GCC C Linker
+gcc  -o "tp3_linux"  ./Controller.o ./Employee.o ./main.o ./parser.o ./utn.o    /home/alumno/Imágenes/eclipse_tp3/tp3_linux/LinkedList.a
+Finished building target: tp3_linux
+ 
+18:42:37 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+Finished building: ../parser.c
+ 
+Building target: tp3_linux
+Invoking: GCC C Linker
+gcc  -o "tp3_linux"  ./Controller.o ./Employee.o ./main.o ./parser.o ./utn.o    /home/alumno/Imágenes/eclipse_tp3/tp3_linux/LinkedList.a
+Finished building target: tp3_linux
+ 
+18:43:26 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+make: No se hace nada para 'all'.
+18:44:56 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+Finished building: ../Controller.c
+ 
+Building target: tp3_linux
+Invoking: GCC C Linker
+gcc  -o "tp3_linux"  ./Controller.o ./Employee.o ./main.o ./parser.o ./utn.o    /home/alumno/Imágenes/eclipse_tp3/tp3_linux/LinkedList.a
+Finished building target: tp3_linux
+ 
+18:45:02 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+make: No se hace nada para 'all'.
+18:46:26 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+../Controller.c: In function ‘controller_loadFromText’:
+../Controller.c:17:8: warning: unused variable ‘pFile’ [-Wunused-variable]
+  FILE* pFile;
+        ^~~~~
+Finished building: ../Controller.c
+ 
+Building target: tp3_linux
+Invoking: GCC C Linker
+gcc  -o "tp3_linux"  ./Controller.o ./Employee.o ./main.o ./parser.o ./utn.o    /home/alumno/Imágenes/eclipse_tp3/tp3_linux/LinkedList.a
+Finished building target: tp3_linux
+ 
+18:52:16 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+../Controller.c: In function ‘controller_loadFromText’:
+../Controller.c:23:3: warning: implicit declaration of function ‘parser_EmployeeFromText’ [-Wimplicit-function-declaration]
+   parser_EmployeeFromText(pArch,pArrayListEmployee);
+   ^~~~~~~~~~~~~~~~~~~~~~~
+../Controller.c:20:4: warning: ‘pArch’ is used uninitialized in this function [-Wuninitialized]
+  if(pArch != NULL)
+    ^
+Finished building: ../Controller.c
+ 
+Building file: ../Employee.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Employee.d" -MT"Employee.o" -o "Employee.o" "../Employee.c"
+../Employee.c: In function ‘employee_newParametros’:
+../Employee.c:29:10: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(emp->id,idStr);
+          ^~~
+In file included from ../Employee.c:3:0:
+/usr/include/string.h:125:14: note: expected ‘char * restrict’ but argument is of type ‘int’
+ extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+              ^~~~~~
+../Employee.c:31:10: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(emp->horasTrabajadas,horasTrabajadasStr);
+          ^~~
+In file included from ../Employee.c:3:0:
+/usr/include/string.h:125:14: note: expected ‘char * restrict’ but argument is of type ‘int’
+ extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+              ^~~~~~
+../Employee.c:32:10: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(emp->sueldo,sueldoStr);
+          ^~~
+In file included from ../Employee.c:3:0:
+/usr/include/string.h:125:14: note: expected ‘char * restrict’ but argument is of type ‘int’
+ extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+              ^~~~~~
+Finished building: ../Employee.c
+ 
+Building target: tp3_linux
+Invoking: GCC C Linker
+gcc  -o "tp3_linux"  ./Controller.o ./Employee.o ./main.o ./parser.o ./utn.o    /home/alumno/Imágenes/eclipse_tp3/tp3_linux/LinkedList.a
+Finished building target: tp3_linux
+ 
+18:53:08 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+../Controller.c: In function ‘controller_loadFromText’:
+../Controller.c:23:3: warning: implicit declaration of function ‘parser_EmployeeFromText’ [-Wimplicit-function-declaration]
+   parser_EmployeeFromText(*pArch,pArrayListEmployee);
+   ^~~~~~~~~~~~~~~~~~~~~~~
+../Controller.c:20:4: warning: ‘pArch’ is used uninitialized in this function [-Wuninitialized]
+  if(pArch != NULL)
+    ^
+Finished building: ../Controller.c
+ 
+Building target: tp3_linux
+Invoking: GCC C Linker
+gcc  -o "tp3_linux"  ./Controller.o ./Employee.o ./main.o ./parser.o ./utn.o    /home/alumno/Imágenes/eclipse_tp3/tp3_linux/LinkedList.a
+Finished building target: tp3_linux
+ 
+18:55:30 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+../Controller.c: In function ‘controller_loadFromText’:
+../Controller.c:23:3: warning: implicit declaration of function ‘parser_EmployeeFromText’ [-Wimplicit-function-declaration]
+   parser_EmployeeFromText(*pArch,pArrayListEmployee);
+   ^~~~~~~~~~~~~~~~~~~~~~~
+../Controller.c:20:4: warning: ‘pArch’ is used uninitialized in this function [-Wuninitialized]
+  if(pArch != NULL)
+    ^
+Finished building: ../Controller.c
+ 
+Building target: tp3_linux
+Invoking: GCC C Linker
+gcc  -o "tp3_linux"  ./Controller.o ./Employee.o ./main.o ./parser.o ./utn.o    /home/alumno/Imágenes/eclipse_tp3/tp3_linux/LinkedList.a
+Finished building target: tp3_linux
+ 
+18:56:00 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+../Controller.c: In function ‘controller_loadFromText’:
+../Controller.c:25:3: warning: implicit declaration of function ‘parser_EmployeeFromText’ [-Wimplicit-function-declaration]
+   parser_EmployeeFromText(*pArch,pArrayListEmployee);
+   ^~~~~~~~~~~~~~~~~~~~~~~
+../Controller.c:22:4: warning: ‘pArch’ is used uninitialized in this function [-Wuninitialized]
+  if(pArch != NULL)
+    ^
+Finished building: ../Controller.c
+ 
+Building target: tp3_linux
+Invoking: GCC C Linker
+gcc  -o "tp3_linux"  ./Controller.o ./Employee.o ./main.o ./parser.o ./utn.o    /home/alumno/Imágenes/eclipse_tp3/tp3_linux/LinkedList.a
+Finished building target: tp3_linux
+ 
+18:59:36 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+make: No se hace nada para 'all'.
+18:59:39 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+make: No se hace nada para 'all'.
+19:08:31 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+../Controller.c: In function ‘controller_loadFromText’:
+../Controller.c:26:3: warning: implicit declaration of function ‘parser_EmployeeFromText’ [-Wimplicit-function-declaration]
+   parser_EmployeeFromText(*pArch,pArrayListEmployee);
+   ^~~~~~~~~~~~~~~~~~~~~~~
+../Controller.c: In function ‘controller_loadFromBinary’:
+../Controller.c:51:3: warning: implicit declaration of function ‘parser_EmployeeFromBinary’ [-Wimplicit-function-declaration]
+   parser_EmployeeFromBinary(*pArch,pArrayListEmployee);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Controller.c: In function ‘controller_loadFromText’:
+../Controller.c:22:4: warning: ‘pArch’ is used uninitialized in this function [-Wuninitialized]
+  if(pArch != NULL)
+    ^
+../Controller.c: In function ‘controller_loadFromBinary’:
+../Controller.c:48:4: warning: ‘pArch’ is used uninitialized in this function [-Wuninitialized]
+  if(pArch != NULL)
+    ^
+Finished building: ../Controller.c
+ 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: tp3_linux
+Invoking: GCC C Linker
+gcc  -o "tp3_linux"  ./Controller.o ./Employee.o ./main.o ./parser.o ./utn.o    /home/alumno/Imágenes/eclipse_tp3/tp3_linux/LinkedList.a
+Finished building target: tp3_linux
+ 
+19:09:05 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+make: No se hace nada para 'all'.
+19:09:34 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+../Controller.c: In function ‘controller_loadFromText’:
+../Controller.c:26:3: warning: implicit declaration of function ‘parser_EmployeeFromText’ [-Wimplicit-function-declaration]
+   parser_EmployeeFromText(*pArch,pArrayListEmployee);
+   ^~~~~~~~~~~~~~~~~~~~~~~
+../Controller.c: In function ‘controller_loadFromBinary’:
+../Controller.c:52:3: warning: implicit declaration of function ‘parser_EmployeeFromBinary’ [-Wimplicit-function-declaration]
+   parser_EmployeeFromBinary(*pArch,pArrayListEmployee);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Controller.c: In function ‘controller_loadFromText’:
+../Controller.c:22:4: warning: ‘pArch’ is used uninitialized in this function [-Wuninitialized]
+  if(pArch != NULL)
+    ^
+../Controller.c: In function ‘controller_loadFromBinary’:
+../Controller.c:49:4: warning: ‘pArch’ is used uninitialized in this function [-Wuninitialized]
+  if(pArch != NULL)
+    ^
+Finished building: ../Controller.c
+ 
+Building target: tp3_linux
+Invoking: GCC C Linker
+gcc  -o "tp3_linux"  ./Controller.o ./Employee.o ./main.o ./parser.o ./utn.o    /home/alumno/Imágenes/eclipse_tp3/tp3_linux/LinkedList.a
+Finished building target: tp3_linux
+ 
+19:10:51 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+../Controller.c: In function ‘controller_loadFromText’:
+../Controller.c:26:3: warning: implicit declaration of function ‘parser_EmployeeFromText’ [-Wimplicit-function-declaration]
+   parser_EmployeeFromText(pFile,pArrayListEmployee);
+   ^~~~~~~~~~~~~~~~~~~~~~~
+../Controller.c:31:9: error: ‘pArch’ undeclared (first use in this function)
+  fclose(pArch);
+         ^~~~~
+../Controller.c:31:9: note: each undeclared identifier is reported only once for each function it appears in
+subdir.mk:30: fallo en las instrucciones para el objetivo 'Controller.o'
+../Controller.c: In function ‘controller_loadFromBinary’:
+../Controller.c:52:3: warning: implicit declaration of function ‘parser_EmployeeFromBinary’ [-Wimplicit-function-declaration]
+   parser_EmployeeFromBinary(*pArch,pArrayListEmployee);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [Controller.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:11:26 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+../Controller.c: In function ‘controller_loadFromText’:
+../Controller.c:26:3: warning: implicit declaration of function ‘parser_EmployeeFromText’ [-Wimplicit-function-declaration]
+   parser_EmployeeFromText(*pFile,*pArrayListEmployee);
+   ^~~~~~~~~~~~~~~~~~~~~~~
+../Controller.c:31:9: error: ‘pArch’ undeclared (first use in this function)
+  fclose(pArch);
+         ^~~~~
+../Controller.c:31:9: note: each undeclared identifier is reported only once for each function it appears in
+../Controller.c: In function ‘controller_loadFromBinary’:
+subdir.mk:30: fallo en las instrucciones para el objetivo 'Controller.o'
+../Controller.c:52:3: warning: implicit declaration of function ‘parser_EmployeeFromBinary’ [-Wimplicit-function-declaration]
+   parser_EmployeeFromBinary(*pArch,pArrayListEmployee);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [Controller.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+19:11:36 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+../Controller.c: In function ‘controller_loadFromText’:
+../Controller.c:26:3: warning: implicit declaration of function ‘parser_EmployeeFromText’ [-Wimplicit-function-declaration]
+   parser_EmployeeFromText(*pFile,*pArrayListEmployee);
+   ^~~~~~~~~~~~~~~~~~~~~~~
+../Controller.c: In function ‘controller_loadFromBinary’:
+../Controller.c:52:3: warning: implicit declaration of function ‘parser_EmployeeFromBinary’ [-Wimplicit-function-declaration]
+   parser_EmployeeFromBinary(*pArch,pArrayListEmployee);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Controller.c: In function ‘controller_loadFromText’:
+../Controller.c:22:4: warning: ‘pFile’ is used uninitialized in this function [-Wuninitialized]
+  if(pFile != NULL)
+    ^
+../Controller.c: In function ‘controller_loadFromBinary’:
+../Controller.c:49:4: warning: ‘pArch’ is used uninitialized in this function [-Wuninitialized]
+  if(pArch != NULL)
+    ^
+Finished building: ../Controller.c
+ 
+Building target: tp3_linux
+Invoking: GCC C Linker
+gcc  -o "tp3_linux"  ./Controller.o ./Employee.o ./main.o ./parser.o ./utn.o    /home/alumno/Imágenes/eclipse_tp3/tp3_linux/LinkedList.a
+Finished building target: tp3_linux
+ 
+19:35:25 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+../Controller.c: In function ‘controller_loadFromText’:
+../Controller.c:26:3: warning: implicit declaration of function ‘parser_EmployeeFromText’ [-Wimplicit-function-declaration]
+   parser_EmployeeFromText(pArchivo,pArrayListEmployee);
+   ^~~~~~~~~~~~~~~~~~~~~~~
+../Controller.c: In function ‘controller_loadFromBinary’:
+../Controller.c:52:3: warning: implicit declaration of function ‘parser_EmployeeFromBinary’ [-Wimplicit-function-declaration]
+   parser_EmployeeFromBinary(*pArch,pArrayListEmployee);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Controller.c: In function ‘controller_loadFromText’:
+../Controller.c:22:4: warning: ‘pArchivo’ is used uninitialized in this function [-Wuninitialized]
+  if(pArchivo != NULL)
+    ^
+../Controller.c: In function ‘controller_loadFromBinary’:
+../Controller.c:49:4: warning: ‘pArch’ is used uninitialized in this function [-Wuninitialized]
+  if(pArch != NULL)
+    ^
+Finished building: ../Controller.c
+ 
+Building file: ../parser.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"parser.d" -MT"parser.o" -o "parser.o" "../parser.c"
+Finished building: ../parser.c
+ 
+Building target: tp3_linux
+Invoking: GCC C Linker
+gcc  -o "tp3_linux"  ./Controller.o ./Employee.o ./main.o ./parser.o ./utn.o    /home/alumno/Imágenes/eclipse_tp3/tp3_linux/LinkedList.a
+Finished building target: tp3_linux
+ 
+19:36:11 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+make: No se hace nada para 'all'.
+19:36:15 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+make: No se hace nada para 'all'.
+19:36:16 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+make: No se hace nada para 'all'.
+19:36:17 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+make: No se hace nada para 'all'.
+19:36:38 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+make: No se hace nada para 'all'.
+19:44:02 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../Employee.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Employee.d" -MT"Employee.o" -o "Employee.o" "../Employee.c"
+../Employee.c: In function ‘employee_newParametros’:
+../Employee.c:29:10: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(emp->id,idStr);
+          ^~~
+In file included from ../Employee.c:3:0:
+/usr/include/string.h:125:14: note: expected ‘char * restrict’ but argument is of type ‘int’
+ extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+              ^~~~~~
+../Employee.c:31:10: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(emp->horasTrabajadas,horasTrabajadasStr);
+          ^~~
+In file included from ../Employee.c:3:0:
+/usr/include/string.h:125:14: note: expected ‘char * restrict’ but argument is of type ‘int’
+ extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+              ^~~~~~
+../Employee.c:32:10: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(emp->sueldo,sueldoStr);
+          ^~~
+In file included from ../Employee.c:3:0:
+/usr/include/string.h:125:14: note: expected ‘char * restrict’ but argument is of type ‘int’
+ extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+              ^~~~~~
+Finished building: ../Employee.c
+ 
+Building target: tp3_linux
+Invoking: GCC C Linker
+gcc  -o "tp3_linux"  ./Controller.o ./Employee.o ./main.o ./parser.o ./utn.o    /home/alumno/Imágenes/eclipse_tp3/tp3_linux/LinkedList.a
+Finished building target: tp3_linux
+ 
+19:51:54 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../Employee.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Employee.d" -MT"Employee.o" -o "Employee.o" "../Employee.c"
+../Employee.c: In function ‘employee_newParametros’:
+../Employee.c:37:10: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(newEmployee->id,idStr);
+          ^~~~~~~~~~~
+In file included from ../Employee.c:3:0:
+/usr/include/string.h:125:14: note: expected ‘char * restrict’ but argument is of type ‘int’
+ extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+              ^~~~~~
+../Employee.c:39:10: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(newEmployee->horasTrabajadas,horasTrabajadasStr);
+          ^~~~~~~~~~~
+In file included from ../Employee.c:3:0:
+/usr/include/string.h:125:14: note: expected ‘char * restrict’ but argument is of type ‘int’
+ extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+              ^~~~~~
+../Employee.c:40:10: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(newEmployee->sueldo,sueldoStr);
+          ^~~~~~~~~~~
+In file included from ../Employee.c:3:0:
+/usr/include/string.h:125:14: note: expected ‘char * restrict’ but argument is of type ‘int’
+ extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+              ^~~~~~
+../Employee.c:29:6: warning: variable ‘bufferSueldos’ set but not used [-Wunused-but-set-variable]
+  int bufferSueldos;
+      ^~~~~~~~~~~~~
+../Employee.c:28:6: warning: variable ‘bufferHorasTrabajadas’ set but not used [-Wunused-but-set-variable]
+  int bufferHorasTrabajadas;
+      ^~~~~~~~~~~~~~~~~~~~~
+../Employee.c:27:6: warning: variable ‘bufferId’ set but not used [-Wunused-but-set-variable]
+  int bufferId;
+      ^~~~~~~~
+Finished building: ../Employee.c
+ 
+Building target: tp3_linux
+Invoking: GCC C Linker
+gcc  -o "tp3_linux"  ./Controller.o ./Employee.o ./main.o ./parser.o ./utn.o    /home/alumno/Imágenes/eclipse_tp3/tp3_linux/LinkedList.a
+Finished building target: tp3_linux
+ 
+19:52:18 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../Employee.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Employee.d" -MT"Employee.o" -o "Employee.o" "../Employee.c"
+../Employee.c: In function ‘employee_newParametros’:
+../Employee.c:37:10: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(newEmployee->id,&idStr);
+          ^~~~~~~~~~~
+In file included from ../Employee.c:3:0:
+/usr/include/string.h:125:14: note: expected ‘char * restrict’ but argument is of type ‘int’
+ extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+              ^~~~~~
+../Employee.c:37:26: warning: passing argument 2 of ‘strcpy’ from incompatible pointer type [-Wincompatible-pointer-types]
+   strcpy(newEmployee->id,&idStr);
+                          ^
+In file included from ../Employee.c:3:0:
+/usr/include/string.h:125:14: note: expected ‘const char * restrict’ but argument is of type ‘char **’
+ extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+              ^~~~~~
+../Employee.c:39:10: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(newEmployee->horasTrabajadas,&horasTrabajadasStr);
+          ^~~~~~~~~~~
+In file included from ../Employee.c:3:0:
+/usr/include/string.h:125:14: note: expected ‘char * restrict’ but argument is of type ‘int’
+ extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+              ^~~~~~
+../Employee.c:39:39: warning: passing argument 2 of ‘strcpy’ from incompatible pointer type [-Wincompatible-pointer-types]
+   strcpy(newEmployee->horasTrabajadas,&horasTrabajadasStr);
+                                       ^
+In file included from ../Employee.c:3:0:
+/usr/include/string.h:125:14: note: expected ‘const char * restrict’ but argument is of type ‘char **’
+ extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+              ^~~~~~
+../Employee.c:40:10: warning: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Wint-conversion]
+   strcpy(newEmployee->sueldo,&sueldoStr);
+          ^~~~~~~~~~~
+In file included from ../Employee.c:3:0:
+/usr/include/string.h:125:14: note: expected ‘char * restrict’ but argument is of type ‘int’
+ extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+              ^~~~~~
+../Employee.c:40:30: warning: passing argument 2 of ‘strcpy’ from incompatible pointer type [-Wincompatible-pointer-types]
+   strcpy(newEmployee->sueldo,&sueldoStr);
+                              ^
+In file included from ../Employee.c:3:0:
+/usr/include/string.h:125:14: note: expected ‘const char * restrict’ but argument is of type ‘char **’
+ extern char *strcpy (char *__restrict __dest, const char *__restrict __src)
+              ^~~~~~
+../Employee.c:29:6: warning: variable ‘bufferSueldos’ set but not used [-Wunused-but-set-variable]
+  int bufferSueldos;
+      ^~~~~~~~~~~~~
+../Employee.c:28:6: warning: variable ‘bufferHorasTrabajadas’ set but not used [-Wunused-but-set-variable]
+  int bufferHorasTrabajadas;
+      ^~~~~~~~~~~~~~~~~~~~~
+../Employee.c:27:6: warning: variable ‘bufferId’ set but not used [-Wunused-but-set-variable]
+  int bufferId;
+      ^~~~~~~~
+Finished building: ../Employee.c
+ 
+Building target: tp3_linux
+Invoking: GCC C Linker
+gcc  -o "tp3_linux"  ./Controller.o ./Employee.o ./main.o ./parser.o ./utn.o    /home/alumno/Imágenes/eclipse_tp3/tp3_linux/LinkedList.a
+Finished building target: tp3_linux
+ 
+19:55:59 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../Employee.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Employee.d" -MT"Employee.o" -o "Employee.o" "../Employee.c"
+Finished building: ../Employee.c
+ 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: tp3_linux
+Invoking: GCC C Linker
+gcc  -o "tp3_linux"  ./Controller.o ./Employee.o ./main.o ./parser.o ./utn.o    /home/alumno/Imágenes/eclipse_tp3/tp3_linux/LinkedList.a
+Finished building target: tp3_linux
+ 
+19:56:49 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: tp3_linux
+Invoking: GCC C Linker
+gcc  -o "tp3_linux"  ./Controller.o ./Employee.o ./main.o ./parser.o ./utn.o    /home/alumno/Imágenes/eclipse_tp3/tp3_linux/LinkedList.a
+Finished building target: tp3_linux
+ 
+19:56:51 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+make: No se hace nada para 'all'.
+21:31:45 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+../Controller.c: In function ‘controller_loadFromText’:
+../Controller.c:30:3: warning: implicit declaration of function ‘parser_EmployeeFromText’ [-Wimplicit-function-declaration]
+   parser_EmployeeFromText(pArchivo,pArrayListEmployee);
+   ^~~~~~~~~~~~~~~~~~~~~~~
+../Controller.c: In function ‘controller_loadFromBinary’:
+../Controller.c:56:3: warning: implicit declaration of function ‘parser_EmployeeFromBinary’ [-Wimplicit-function-declaration]
+   parser_EmployeeFromBinary(*pArch,pArrayListEmployee);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Controller.c: In function ‘controller_addEmployee’:
+../Controller.c:86:3: warning: implicit declaration of function ‘utn_getName’ [-Wimplicit-function-declaration]
+   utn_getName("\nIngrese Nombre: ","\nNo es un nombre valido",0,50,3,auxNombre);
+   ^~~~~~~~~~~
+../Controller.c:87:3: warning: implicit declaration of function ‘utn_getUnsignedInt’ [-Wimplicit-function-declaration]
+   utn_getUnsignedInt("\nIngrese Horas Trabajadas: ","\nNo es una hora valida",1,sizeof(int),1,100,3,&auxHorasTrabajadas);
+   ^~~~~~~~~~~~~~~~~~
+../Controller.c:88:3: warning: implicit declaration of function ‘utn_getFloat’ [-Wimplicit-function-declaration]
+   utn_getFloat("\nIngrese el sueldo: ", "\nError, ingrese solo numeros: ",1,sizeof(float),1,10000000,3,&auxSueldo);
+   ^~~~~~~~~~~~
+../Controller.c:77:6: warning: variable ‘auxId’ set but not used [-Wunused-but-set-variable]
+  int auxId;
+      ^~~~~
+../Controller.c:74:12: warning: variable ‘pEmpleados’ set but not used [-Wunused-but-set-variable]
+  Employee* pEmpleados;
+            ^~~~~~~~~~
+../Controller.c: In function ‘controller_loadFromText’:
+../Controller.c:26:4: warning: ‘pArchivo’ is used uninitialized in this function [-Wuninitialized]
+  if(pArchivo != NULL)
+    ^
+../Controller.c: In function ‘controller_loadFromBinary’:
+../Controller.c:53:4: warning: ‘pArch’ is used uninitialized in this function [-Wuninitialized]
+  if(pArch != NULL)
+    ^
+Finished building: ../Controller.c
+ 
+Building file: ../main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: tp3_linux
+Invoking: GCC C Linker
+gcc  -o "tp3_linux"  ./Controller.o ./Employee.o ./main.o ./parser.o ./utn.o    /home/alumno/Imágenes/eclipse_tp3/tp3_linux/LinkedList.a
+Finished building target: tp3_linux
+ 
+21:35:17 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+../Controller.c: In function ‘controller_loadFromText’:
+../Controller.c:30:3: warning: implicit declaration of function ‘parser_EmployeeFromText’ [-Wimplicit-function-declaration]
+   parser_EmployeeFromText(pArchivo,pArrayListEmployee);
+   ^~~~~~~~~~~~~~~~~~~~~~~
+../Controller.c: In function ‘controller_loadFromBinary’:
+../Controller.c:56:3: warning: implicit declaration of function ‘parser_EmployeeFromBinary’ [-Wimplicit-function-declaration]
+   parser_EmployeeFromBinary(pArch,pArrayListEmployee);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Controller.c: In function ‘controller_addEmployee’:
+../Controller.c:86:3: warning: implicit declaration of function ‘utn_getName’ [-Wimplicit-function-declaration]
+   utn_getName("\nIngrese Nombre: ","\nNo es un nombre valido",0,50,3,auxNombre);
+   ^~~~~~~~~~~
+../Controller.c:87:3: warning: implicit declaration of function ‘utn_getUnsignedInt’ [-Wimplicit-function-declaration]
+   utn_getUnsignedInt("\nIngrese Horas Trabajadas: ","\nNo es una hora valida",1,sizeof(int),1,100,3,&auxHorasTrabajadas);
+   ^~~~~~~~~~~~~~~~~~
+../Controller.c:88:3: warning: implicit declaration of function ‘utn_getFloat’ [-Wimplicit-function-declaration]
+   utn_getFloat("\nIngrese el sueldo: ", "\nError, ingrese solo numeros: ",1,sizeof(float),1,10000000,3,&auxSueldo);
+   ^~~~~~~~~~~~
+../Controller.c:77:6: warning: variable ‘auxId’ set but not used [-Wunused-but-set-variable]
+  int auxId;
+      ^~~~~
+../Controller.c:74:12: warning: variable ‘pEmpleados’ set but not used [-Wunused-but-set-variable]
+  Employee* pEmpleados;
+            ^~~~~~~~~~
+../Controller.c: In function ‘controller_loadFromText’:
+../Controller.c:26:4: warning: ‘pArchivo’ is used uninitialized in this function [-Wuninitialized]
+  if(pArchivo != NULL)
+    ^
+../Controller.c: In function ‘controller_loadFromBinary’:
+../Controller.c:53:4: warning: ‘pArch’ is used uninitialized in this function [-Wuninitialized]
+  if(pArch != NULL)
+    ^
+Finished building: ../Controller.c
+ 
+Building target: tp3_linux
+Invoking: GCC C Linker
+gcc  -o "tp3_linux"  ./Controller.o ./Employee.o ./main.o ./parser.o ./utn.o    /home/alumno/Imágenes/eclipse_tp3/tp3_linux/LinkedList.a
+Finished building target: tp3_linux
+ 
+21:38:45 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+../Controller.c: In function ‘controller_addEmployee’:
+../Controller.c:87:3: warning: implicit declaration of function ‘utn_getName’ [-Wimplicit-function-declaration]
+   utn_getName("\nIngrese Nombre: ","\nNo es un nombre valido",0,50,3,auxNombre);
+   ^~~~~~~~~~~
+../Controller.c:88:3: warning: implicit declaration of function ‘utn_getUnsignedInt’ [-Wimplicit-function-declaration]
+   utn_getUnsignedInt("\nIngrese Horas Trabajadas: ","\nNo es una hora valida",1,sizeof(int),1,100,3,&auxHorasTrabajadas);
+   ^~~~~~~~~~~~~~~~~~
+../Controller.c:89:3: warning: implicit declaration of function ‘utn_getFloat’ [-Wimplicit-function-declaration]
+   utn_getFloat("\nIngrese el sueldo: ", "\nError, ingrese solo numeros: ",1,sizeof(float),1,10000000,3,&auxSueldo);
+   ^~~~~~~~~~~~
+../Controller.c:78:6: warning: variable ‘auxId’ set but not used [-Wunused-but-set-variable]
+  int auxId;
+      ^~~~~
+../Controller.c:75:12: warning: variable ‘pEmpleados’ set but not used [-Wunused-but-set-variable]
+  Employee* pEmpleados;
+            ^~~~~~~~~~
+../Controller.c: In function ‘controller_loadFromText’:
+../Controller.c:27:4: warning: ‘pArchivo’ is used uninitialized in this function [-Wuninitialized]
+  if(pArchivo != NULL)
+    ^
+../Controller.c: In function ‘controller_loadFromBinary’:
+../Controller.c:54:4: warning: ‘pArch’ is used uninitialized in this function [-Wuninitialized]
+  if(pArch != NULL)
+    ^
+Finished building: ../Controller.c
+ 
+Building target: tp3_linux
+Invoking: GCC C Linker
+gcc  -o "tp3_linux"  ./Controller.o ./Employee.o ./main.o ./parser.o ./utn.o    /home/alumno/Imágenes/eclipse_tp3/tp3_linux/LinkedList.a
+Finished building target: tp3_linux
+ 
+21:46:18 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+../Controller.c: In function ‘controller_addEmployee’:
+../Controller.c:77:3: error: too few arguments to function ‘fgets’
+   fgets(auxNombre);
+   ^~~~~
+In file included from ../Controller.c:1:0:
+/usr/include/stdio.h:624:14: note: declared here
+ extern char *fgets (char *__restrict __s, int __n, FILE *__restrict __stream)
+              ^~~~~
+../Controller.c:70:6: warning: unused variable ‘auxHorasTrabajadas’ [-Wunused-variable]
+subdir.mk:30: fallo en las instrucciones para el objetivo 'Controller.o'
+  int auxHorasTrabajadas;
+      ^~~~~~~~~~~~~~~~~~
+../Controller.c:69:6: warning: unused variable ‘auxSueldo’ [-Wunused-variable]
+  int auxSueldo;
+      ^~~~~~~~~
+../Controller.c:67:6: warning: variable ‘auxId’ set but not used [-Wunused-but-set-variable]
+  int auxId;
+      ^~~~~
+../Controller.c:64:12: warning: variable ‘pEmpleados’ set but not used [-Wunused-but-set-variable]
+  Employee* pEmpleados;
+            ^~~~~~~~~~
+make: *** [Controller.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+21:46:36 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+../Controller.c: In function ‘controller_addEmployee’:
+../Controller.c:70:6: warning: unused variable ‘auxHorasTrabajadas’ [-Wunused-variable]
+  int auxHorasTrabajadas;
+      ^~~~~~~~~~~~~~~~~~
+../Controller.c:69:6: warning: unused variable ‘auxSueldo’ [-Wunused-variable]
+  int auxSueldo;
+      ^~~~~~~~~
+../Controller.c:68:7: warning: unused variable ‘auxNombre’ [-Wunused-variable]
+  char auxNombre[50];
+       ^~~~~~~~~
+../Controller.c:67:6: warning: unused variable ‘auxId’ [-Wunused-variable]
+  int auxId;
+      ^~~~~
+../Controller.c:64:12: warning: variable ‘pEmpleados’ set but not used [-Wunused-but-set-variable]
+  Employee* pEmpleados;
+            ^~~~~~~~~~
+At top level:
+../Controller.c:8:12: warning: ‘generarId’ defined but not used [-Wunused-function]
+ static int generarId(void)
+            ^~~~~~~~~
+Finished building: ../Controller.c
+ 
+Building target: tp3_linux
+Invoking: GCC C Linker
+gcc  -o "tp3_linux"  ./Controller.o ./Employee.o ./main.o ./parser.o ./utn.o    /home/alumno/Imágenes/eclipse_tp3/tp3_linux/LinkedList.a
+Finished building target: tp3_linux
+ 
+21:47:19 **** Incremental Build of configuration Debug for project tp3_linux ****
+make all 
+Building file: ../Controller.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Controller.d" -MT"Controller.o" -o "Controller.o" "../Controller.c"
+../Controller.c: In function ‘controller_addEmployee’:
+../Controller.c:70:6: warning: unused variable ‘auxHorasTrabajadas’ [-Wunused-variable]
+  int auxHorasTrabajadas;
+      ^~~~~~~~~~~~~~~~~~
+../Controller.c:69:6: warning: unused variable ‘auxSueldo’ [-Wunused-variable]
+  int auxSueldo;
+      ^~~~~~~~~
+../Controller.c:68:7: warning: unused variable ‘auxNombre’ [-Wunused-variable]
+  char auxNombre[50];
+       ^~~~~~~~~
+../Controller.c:67:6: warning: unused variable ‘auxId’ [-Wunused-variable]
+  int auxId = 0;
+      ^~~~~
+../Controller.c:64:12: warning: variable ‘pEmpleados’ set but not used [-Wunused-but-set-variable]
+  Employee* pEmpleados;
+            ^~~~~~~~~~
+At top level:
+../Controller.c:8:12: warning: ‘generarId’ defined but not used [-Wunused-function]
+ static int generarId(void)
+            ^~~~~~~~~
+Finished building: ../Controller.c
+ 
+Building target: tp3_linux
+Invoking: GCC C Linker
+gcc  -o "tp3_linux"  ./Controller.o ./Employee.o ./main.o ./parser.o ./utn.o    /home/alumno/Imágenes/eclipse_tp3/tp3_linux/LinkedList.a
+Finished building target: tp3_linux
+ 
